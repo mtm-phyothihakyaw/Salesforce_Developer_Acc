@@ -1,0 +1,14 @@
+salesforce.EmailTemplate unfiled_public_Embed_a_Survey_Link@zcduuu {
+  available = true
+  description = "Boilerplate content for when you embed a link to a survey in an email. You can't embed a survey link if you edit the merge fields or delete this template."
+  encodingKey = "UTF-8"
+  name = "Embed_a_Survey_Link"
+  relatedEntityType = "SurveyQuestion"
+  style = "none"
+  subject = "Your feedback is important. Help us to improve by taking this survey."
+  type = "custom"
+  uiType = "SFX"
+  fullName = "unfiled$public/Embed_a_Survey_Link"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Embed_a_Survey_Link/Embed_a_Survey_Link.email")
+  _alias = "unfiled$public/Embed_a_Survey_Link"
+}

@@ -1,0 +1,48 @@
+type salesforce.Knowledge__kav {
+  salesforce.Html Content__c {
+    apiName = "Knowledge__kav.Content__c"
+    externalId = false
+    inlineHelpText = "Indicate what information is provided in basic articles. You can create additional fields to further structure article content."
+    label = "Content"
+    length = 32768
+    visibleLines = 20
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DigitalEngagementResponse__c {
+    apiName = "Knowledge__kav.DigitalEngagementResponse__c"
+    externalId = false
+    inlineHelpText = "Provide a short response for digital engagement channels like Chat, Messaging, Social, and Bots."
+    label = "Digital Engagement Response"
+    length = 255
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Html InternalNotes__c {
+    apiName = "Knowledge__kav.InternalNotes__c"
+    externalId = false
+    inlineHelpText = "Provide any internal notes.  Notes are only visible to specific internal user profiles and aren’t shared with external user profiles when the article is shared externally."
+    label = "Internal Notes"
+    length = 32768
+    visibleLines = 20
+    _hidden_value = true
+  }
+  salesforce.Html Question__c {
+    apiName = "Knowledge__kav.Question__c"
+    externalId = false
+    inlineHelpText = "Describe the question or issue that this article answers."
+    label = "Question"
+    length = 32768
+    visibleLines = 20
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

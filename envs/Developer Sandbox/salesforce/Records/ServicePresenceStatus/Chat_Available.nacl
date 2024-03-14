@@ -1,0 +1,8 @@
+salesforce.ServicePresenceStatus Chat_Available {
+  fullName = "Chat_Available"
+  channels = {
+    channel = "sfdc_liveagent"
+  }
+  label = "Chat - Available"
+  _alias = "Chat - Available"
+}

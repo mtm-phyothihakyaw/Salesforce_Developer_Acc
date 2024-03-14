@@ -1,0 +1,22 @@
+salesforce.ModerationRule Default_Help_Center_Review_the_first_post@ssvuuu {
+  fullName = "Default Help Center.Review_the_first_post"
+  action = "Review"
+  active = false
+  description = "Community moderators review the first post or comment from new members"
+  entitiesAndFields = [
+    {
+      entityName = "FeedItem"
+    },
+    {
+      entityName = "FeedComment"
+    },
+    {
+      entityName = "FeedPollChoice"
+    },
+  ]
+  masterLabel = "Review the first post or comment made by a new member"
+  type = "Content"
+  userCriteria = "Default Help Center.Members_without_contribution"
+  userMessage = "You can't use %BLOCKED_KEYWORD% or other inappropriate words in this community. Review your content and try again."
+  _alias = "Default Help Center.Review_the_first_post"
+}

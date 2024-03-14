@@ -1,0 +1,9 @@
+salesforce.ListView Approver__c_All {
+  fullName = "Approver__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Approver__c,
+  ]
+  _alias = "All"
+}

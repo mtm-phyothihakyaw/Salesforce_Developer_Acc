@@ -1,0 +1,17 @@
+salesforce.EmailTemplate unfiled_public_Recall_Email_Template@zcduu {
+  available = true
+  encodingKey = "UTF-8"
+  name = "Recall Email Template"
+  style = "none"
+  subject = "Recall Alert"
+  textOnly = '''
+Hello {!User.Username}, 
+
+ This request has been recalled : {!Account.Name}.
+'''
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/Recall_Email_Template"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Recall_Email_Template/Recall_Email_Template.email")
+  _alias = "unfiled$public/Recall_Email_Template"
+}

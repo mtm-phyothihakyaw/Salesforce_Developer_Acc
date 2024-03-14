@@ -1,0 +1,174 @@
+salesforce.Flow net_promoter_score {
+  fullName = "net_promoter_score"
+  interviewLabel = "Net Promoter Score"
+  label = "Net Promoter Score"
+  processMetadataValues = [
+    {
+      name = "advanceThankYouPageEnabled"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "autoProgressEnabled"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "hasWelcomePage"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "isSimpleSurvey"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "overrideActiveVersion"
+      value = {
+        booleanValue = false
+      }
+    },
+  ]
+  processType = "Survey"
+  screens = {
+    name = "surveyQuestionPage"
+    label = "Page 1"
+    locationX = 0
+    locationY = 0
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    fields = [
+      {
+        processMetadataValues = [
+          {
+            name = "autoProgressAction"
+            value = {
+              stringValue = "NONE"
+            }
+          },
+          {
+            name = "defaultValue"
+            value = {
+              elementReference = "var_q_246f050d_88a1_4bec_9b3b_85f4ea889cbe_defaultValue"
+            }
+          },
+          {
+            name = "max"
+            value = {
+              stringValue = "10"
+            }
+          },
+          {
+            name = "min"
+            value = {
+              stringValue = "0"
+            }
+          },
+        ]
+        name = "q_246f050d_88a1_4bec_9b3b_85f4ea889cbe"
+        dataType = "Number"
+        extensionName = "survey:runtimeNps"
+        fieldText = "How likely are you to recommend our service to a friend or colleague?"
+        fieldType = "ComponentInput"
+        isRequired = false
+        scale = 0
+      },
+      {
+        processMetadataValues = [
+          {
+            name = "autoProgressAction"
+            value = {
+              stringValue = "NONE"
+            }
+          },
+        ]
+        name = "q_264b4fd3_5dc0_4970_9d11_85b39cd29d7d"
+        dataType = "String"
+        fieldText = "Any comments or feedback for us?"
+        fieldType = "InputField"
+        isRequired = false
+      },
+    ]
+    pausedText = "To pick up where you left off, refresh this page, or open the survey again."
+    showFooter = true
+    showHeader = true
+  }
+  startElementReference = "surveyQuestionPage"
+  status = "Active"
+  textTemplates = [
+    {
+      name = "thankYouDescriptionTextTemplate"
+      isViewedAsPlainText = false
+      text = ""
+    },
+    {
+      name = "thankYouLabelTextTemplate"
+      isViewedAsPlainText = false
+      text = "Thanks for participating!"
+    },
+  ]
+  variables = [
+    {
+      name = "guestUserLang"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+    },
+    {
+      name = "invitationId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = ""
+      }
+    },
+    {
+      name = "previewMode"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "thankYouDescription"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = "{!thankYouDescriptionTextTemplate}"
+      }
+    },
+    {
+      name = "thankYouLabel"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = "{!thankYouLabelTextTemplate}"
+      }
+    },
+    {
+      name = "var_q_246f050d_88a1_4bec_9b3b_85f4ea889cbe_defaultValue"
+      dataType = "Number"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      scale = 2
+    },
+  ]
+  _alias = "Net Promoter Score"
+}

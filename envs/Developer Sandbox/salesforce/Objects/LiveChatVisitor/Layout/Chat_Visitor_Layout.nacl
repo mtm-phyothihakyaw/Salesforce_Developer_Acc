@@ -1,0 +1,61 @@
+salesforce.Layout LiveChatVisitor_Chat_Visitor_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatVisitor.field.Name
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatVisitor.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatVisitor.field.SessionKey
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatVisitor.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "UserAgent",
+        "Status",
+      ]
+      relatedList = "RelatedLiveChatTranscriptList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "LiveChatVisitor-Chat Visitor Layout"
+  _parent = [
+    salesforce.LiveChatVisitor,
+  ]
+  _alias = "LiveChatVisitor-Chat Visitor Layout"
+}

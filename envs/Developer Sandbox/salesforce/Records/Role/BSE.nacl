@@ -1,0 +1,9 @@
+salesforce.Role BSE {
+  fullName = "BSE"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  mayForecastManagerShare = false
+  name = "BSE"
+  opportunityAccessLevel = "Edit"
+  _alias = "BSE"
+}

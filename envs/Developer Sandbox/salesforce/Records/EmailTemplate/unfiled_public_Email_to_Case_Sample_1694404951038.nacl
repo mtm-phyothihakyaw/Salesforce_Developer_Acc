@@ -1,0 +1,14 @@
+salesforce.EmailTemplate unfiled_public_Email_to_Case_Sample_1694404951038@zcduuuu {
+  available = true
+  description = "Sent to case contact after their email inquiry"
+  encodingKey = "UTF-8"
+  name = "Email-to-Case (Sample)"
+  relatedEntityType = "Case"
+  style = "none"
+  subject = "Thank you for contacting us"
+  type = "custom"
+  uiType = "SFX"
+  fullName = "unfiled$public/Email_to_Case_Sample_1694404951038"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Email_to_Case_Sample_1694404951038/Email_to_Case_Sample_1694404951038.email")
+  _alias = "unfiled$public/Email_to_Case_Sample_1694404951038"
+}

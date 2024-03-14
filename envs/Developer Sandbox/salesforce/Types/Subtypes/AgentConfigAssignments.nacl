@@ -1,0 +1,21 @@
+type salesforce.AgentConfigAssignments {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.AgentConfigProfileAssignments profiles {
+  }
+  salesforce.AgentConfigUserAssignments users {
+  }
+  metadataType = "AgentConfigAssignments"
+}

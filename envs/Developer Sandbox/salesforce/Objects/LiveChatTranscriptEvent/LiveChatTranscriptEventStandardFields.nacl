@@ -1,0 +1,479 @@
+type salesforce.LiveChatTranscriptEvent {
+  salesforce.Lookup AgentId {
+    apiName = "LiveChatTranscriptEvent.AgentId"
+    relationshipName = "Agent"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "User ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Detail {
+    apiName = "LiveChatTranscriptEvent.Detail"
+    length = 255
+    label = "Detail"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.MasterDetail LiveChatTranscriptId {
+    apiName = "LiveChatTranscriptEvent.LiveChatTranscriptId"
+    relationshipName = "LiveChatTranscript"
+    referenceTo = [
+      salesforce.LiveChatTranscript,
+    ]
+    _required = true
+    label = "Chat Transcript ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.DateTime Time {
+    apiName = "LiveChatTranscriptEvent.Time"
+    _required = true
+    label = "Time"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist Type {
+    apiName = "LiveChatTranscriptEvent.Type"
+    valueSet = [
+      {
+        fullName = "Transfer"
+        isActive = true
+        label = "Transfer Accepted"
+        default = false
+      },
+      {
+        fullName = "ChatRequest"
+        isActive = true
+        label = "Chat Requested"
+        default = false
+      },
+      {
+        fullName = "Enqueue"
+        isActive = true
+        label = "Queued"
+        default = false
+      },
+      {
+        fullName = "PushAssignment"
+        isActive = true
+        label = "Routed (Push)"
+        default = false
+      },
+      {
+        fullName = "DeclineManual"
+        isActive = true
+        label = "Decline (Manual)"
+        default = false
+      },
+      {
+        fullName = "DeclineTimeout"
+        isActive = true
+        label = "Decline (Timeout)"
+        default = false
+      },
+      {
+        fullName = "CancelNoAgent"
+        isActive = true
+        label = "Cancel (No Agent)"
+        default = false
+      },
+      {
+        fullName = "CancelNoQueue"
+        isActive = true
+        label = "Cancel (No Queue)"
+        default = false
+      },
+      {
+        fullName = "Accept"
+        isActive = true
+        label = "Accepted"
+        default = false
+      },
+      {
+        fullName = "LeaveAgent"
+        isActive = true
+        label = "Agent Left"
+        default = false
+      },
+      {
+        fullName = "LeaveVisitor"
+        isActive = true
+        label = "Visitor Left"
+        default = false
+      },
+      {
+        fullName = "EndAgent"
+        isActive = true
+        label = "Ended by Agent"
+        default = false
+      },
+      {
+        fullName = "EndVisitor"
+        isActive = true
+        label = "Ended by Visitor"
+        default = false
+      },
+      {
+        fullName = "ChoiceRoute"
+        isActive = true
+        label = "Routed (Choice)"
+        default = false
+      },
+      {
+        fullName = "Other"
+        isActive = true
+        label = "Other"
+        default = false
+      },
+      {
+        fullName = "TransferRequest"
+        isActive = true
+        label = "Transfer Requested"
+        default = false
+      },
+      {
+        fullName = "TransferCancelled"
+        isActive = true
+        label = "Transfer Request Canceled"
+        default = false
+      },
+      {
+        fullName = "AlertCriticalWaitChat"
+        isActive = true
+        label = "Critical Wait Alert Time Reached"
+        default = false
+      },
+      {
+        fullName = "ClearCriticalWaitChat"
+        isActive = true
+        label = "Critical Wait Alert Cleared"
+        default = false
+      },
+      {
+        fullName = "TransferDeclined"
+        isActive = true
+        label = "Transfer Request Declined"
+        default = false
+      },
+      {
+        fullName = "FileTransferRequested"
+        isActive = true
+        label = "File Transfer Requested by Agent"
+        default = false
+      },
+      {
+        fullName = "FileCanceledAgent"
+        isActive = true
+        label = "File Transfer Canceled by Agent"
+        default = false
+      },
+      {
+        fullName = "FileCanceledChasitor"
+        isActive = true
+        label = "File Transfer Canceled by Visitor"
+        default = false
+      },
+      {
+        fullName = "FileTransferSuccess"
+        isActive = true
+        label = "File Transfer Success"
+        default = false
+      },
+      {
+        fullName = "FileTransferFailure"
+        isActive = true
+        label = "File Transfer Failure"
+        default = false
+      },
+      {
+        fullName = "TransferredToButton"
+        isActive = true
+        label = "Transferred to button"
+        default = false
+      },
+      {
+        fullName = "TransferToButtonFailed"
+        isActive = true
+        label = "Transfer to button failed"
+        default = false
+      },
+      {
+        fullName = "ConferenceRequest"
+        isActive = true
+        label = "Chat Conference Requested"
+        default = false
+      },
+      {
+        fullName = "ConferenceRequestCanceled"
+        isActive = true
+        label = "Chat Conference Canceled"
+        default = false
+      },
+      {
+        fullName = "ConferenceRequestDeclined"
+        isActive = true
+        label = "Chat Conference Declined"
+        default = false
+      },
+      {
+        fullName = "OperatorJoinedConference"
+        isActive = true
+        label = "Agent Joined Conference"
+        default = false
+      },
+      {
+        fullName = "OperatorLeftConference"
+        isActive = true
+        label = "Agent Left Conference"
+        default = false
+      },
+      {
+        fullName = "CancelBlocked"
+        isActive = true
+        label = "Cancel (Blocked)"
+        default = false
+      },
+      {
+        fullName = "AgentBlocked"
+        isActive = true
+        label = "Blocked by Agent"
+        default = false
+      },
+      {
+        fullName = "CancelVisitor"
+        isActive = true
+        label = "Canceled by Visitor"
+        default = false
+      },
+      {
+        fullName = "FlagRaised"
+        isActive = true
+        label = "Flag Raised"
+        default = false
+      },
+      {
+        fullName = "FlagLoweredAgent"
+        isActive = true
+        label = "Flag Lowered by Agent"
+        default = false
+      },
+      {
+        fullName = "FlagLoweredSupervisor"
+        isActive = true
+        label = "Flag Lowered by Supervisor"
+        default = false
+      },
+      {
+        fullName = "SensitiveDataAgent"
+        isActive = true
+        label = "Sensitive data blocked (Agent)"
+        default = false
+      },
+      {
+        fullName = "SensitiveDataVisitor"
+        isActive = true
+        label = "Sensitive data blocked (Visitor)"
+        default = false
+      },
+      {
+        fullName = "SensitiveDataSupervisor"
+        isActive = true
+        label = "Sensitive data blocked (Supervisor)"
+        default = false
+      },
+      {
+        fullName = "ChasitorIdleTimeout"
+        isActive = true
+        label = "Visitor Idle Time-Out"
+        default = false
+      },
+      {
+        fullName = "ChasitorIdleTimeoutWarningTriggered"
+        isActive = true
+        label = "Visitor Idle Time-Out Warning Appeared"
+        default = false
+      },
+      {
+        fullName = "ChasitorIdleTimeoutWarningCleared"
+        isActive = true
+        label = "Visitor Idle Time-Out Warning Cleared"
+        default = false
+      },
+      {
+        fullName = "FileTransferToChasitor"
+        isActive = true
+        label = "File Transfer Initiated by Agent"
+        default = false
+      },
+      {
+        fullName = "ChatbotEstablished"
+        isActive = true
+        label = "Accepted by Chatbot"
+        default = false
+      },
+      {
+        fullName = "ChatbotNotEstablished"
+        isActive = true
+        label = "Chatbot Request Failed"
+        default = false
+      },
+      {
+        fullName = "TransferredToSbrSkill"
+        isActive = true
+        label = "Transferred to skill"
+        default = false
+      },
+      {
+        fullName = "Unassigned"
+        isActive = true
+        label = "Unassigned"
+        default = false
+      },
+      {
+        fullName = "TransferredToQueue"
+        isActive = true
+        label = "Transferred to queue"
+        default = false
+      },
+      {
+        fullName = "TransferredToBot"
+        isActive = true
+        label = "Transferred to bot"
+        default = false
+      },
+      {
+        fullName = "ChatbotEndChat"
+        isActive = true
+        label = "Chatbot end chat"
+        default = false
+      },
+      {
+        fullName = "ChatResumedAfterTransfer"
+        isActive = true
+        label = "Chat resumed"
+        default = false
+      },
+      {
+        fullName = "TransferToQueueFailed"
+        isActive = true
+        label = "Transfer to queue failed"
+        default = false
+      },
+      {
+        fullName = "TransferToBotFailed"
+        isActive = true
+        label = "Transfer to bot failed"
+        default = false
+      },
+      {
+        fullName = "ChatbotEndedChatByAction"
+        isActive = true
+        label = "Conversation ended by automated action"
+        default = false
+      },
+      {
+        fullName = "TransferToSbrSkillFailed"
+        isActive = true
+        label = "Transfer to sbr skill failed"
+        default = false
+      },
+      {
+        fullName = "ConnectionTimeout"
+        isActive = true
+        label = "Timeout Triggered"
+        default = false
+      },
+      {
+        fullName = "ConnectionWarning"
+        isActive = true
+        label = "Warning Triggered"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LiveChatTranscriptEvent.Id"
+    label = "Chat Transcript Event ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveChatTranscriptEvent.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveChatTranscriptEvent.Name"
+    label = "Chat Transcript Event Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveChatTranscriptEvent.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveChatTranscriptEvent.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveChatTranscriptEvent.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveChatTranscriptEvent.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveChatTranscriptEvent.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

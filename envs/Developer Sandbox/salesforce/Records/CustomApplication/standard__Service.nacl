@@ -1,0 +1,24 @@
+salesforce.CustomApplication standard__Service {
+  defaultLandingTab = "standard-home"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  tabs = [
+    "standard-Chatter",
+    "standard-Account",
+    "standard-Contact",
+    "standard-Case",
+    "standard-Solution",
+    "standard-report",
+    "standard-Dashboard",
+    salesforce.CustomTab.instance.Knowledge__kav,
+    salesforce.CustomTab.instance.Leave_Request__c,
+    salesforce.CustomTab.instance.Approver__c,
+  ]
+  fullName = "standard__Service"
+  _alias = "standard__Service"
+}

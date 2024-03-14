@@ -1,0 +1,148 @@
+type salesforce.Survey {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    hidden_string keyPrefix {
+    }
+    salesforce.ActionOverride actionOverrides {
+    }
+    string compactLayoutAssignment {
+    }
+    string description {
+    }
+    boolean enableDataTranslation {
+    }
+    boolean enableDivisions {
+    }
+    boolean enableEnhancedLookup {
+    }
+    boolean enableFeeds {
+    }
+    boolean enableHistory {
+    }
+    boolean enableLicensing {
+    }
+    boolean enablePublishStatusTracking {
+    }
+    string externalDataSource {
+    }
+    string externalName {
+    }
+    string externalRepository {
+    }
+    salesforce.HistoryRetentionPolicy historyRetentionPolicy {
+    }
+    salesforce.MktDataLakeAttributes mktDataLakeAttributes {
+    }
+    salesforce.MktDataModelAttributes mktDataModelAttributes {
+    }
+    salesforce.ProfileSearchLayouts profileSearchLayouts {
+    }
+    boolean recordTypeTrackFeedHistory {
+    }
+    boolean recordTypeTrackHistory {
+    }
+    salesforce.SearchLayouts searchLayouts {
+    }
+    salesforce.SharingRecalculation sharingRecalculations {
+    }
+    string externalSharingModel {
+    }
+    hidden_string internalId {
+    }
+  }
+  apiName = "Survey"
+  metadataType = "CustomObject"
+  label = "Survey"
+  actionOverrides = [
+    {
+      actionName = "DeleteSurvey"
+      type = "Default"
+    },
+    {
+      actionName = "DeleteSurvey"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "DeleteSurvey"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "NewSurvey"
+      type = "Default"
+    },
+    {
+      actionName = "NewSurvey"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "NewSurvey"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "OpenLatestVersion"
+      type = "Default"
+    },
+    {
+      actionName = "OpenLatestVersion"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "OpenLatestVersion"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      formFactor = "Small"
+      type = "Default"
+    },
+  ]
+  compactLayoutAssignment = "SYSTEM"
+  enableFeeds = false
+  externalSharingModel = "Private"
+  searchLayouts = {
+    customTabListAdditionalFields = [
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "TotalVersionsCount",
+    ]
+    lookupDialogsAdditionalFields = [
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "TotalVersionsCount",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "TotalVersionsCount",
+    ]
+    searchResultsAdditionalFields = [
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "TotalVersionsCount",
+    ]
+  }
+  _alias = "Survey"
+  topicsForObjects = {
+    enableTopics = false
+  }
+}

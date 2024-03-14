@@ -1,0 +1,128 @@
+type salesforce.LinkedArticle {
+  salesforce.Lookup KnowledgeArticleId {
+    apiName = "LinkedArticle.KnowledgeArticleId"
+    relationshipName = "KnowledgeArticle"
+    referenceTo = [
+      "Knowledge__ka",
+    ]
+    label = "Article ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup KnowledgeArticleVersionId {
+    apiName = "LinkedArticle.KnowledgeArticleVersionId"
+    relationshipName = "KnowledgeArticleVersion"
+    referenceTo = [
+      salesforce.Knowledge__kav,
+    ]
+    label = "Knowledge Article Version ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup LinkedEntityId {
+    apiName = "LinkedArticle.LinkedEntityId"
+    relationshipName = "LinkedEntity"
+    referenceTo = [
+      salesforce.ChangeRequest,
+      salesforce.Incident,
+      salesforce.LiveChatTranscript,
+      salesforce.MessagingSession,
+      salesforce.Problem,
+      salesforce.VoiceCall,
+      salesforce.WorkOrder,
+      salesforce.WorkOrderLineItem,
+      salesforce.WorkType,
+    ]
+    label = "Linked Entity ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Type {
+    apiName = "LinkedArticle.Type"
+    length = 50
+    label = "Linked Object Type"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "LinkedArticle.Id"
+    label = "Linked Article ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LinkedArticle.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "LinkedArticle.Name"
+    length = 255
+    _required = true
+    label = "Linked Article Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LinkedArticle.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LinkedArticle.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LinkedArticle.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LinkedArticle.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LinkedArticle.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,14 @@
+salesforce.EmailTemplate unfiled_public_Web_to_Case_Sample_1694404951085@zcduuuu {
+  available = true
+  description = "Sent to case contact after their web inquiry"
+  encodingKey = "UTF-8"
+  name = "Web-to-Case (Sample)"
+  relatedEntityType = "Case"
+  style = "none"
+  subject = "Thank you for contacting us"
+  type = "custom"
+  uiType = "SFX"
+  fullName = "unfiled$public/Web_to_Case_Sample_1694404951085"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Web_to_Case_Sample_1694404951085/Web_to_Case_Sample_1694404951085.email")
+  _alias = "unfiled$public/Web_to_Case_Sample_1694404951085"
+}

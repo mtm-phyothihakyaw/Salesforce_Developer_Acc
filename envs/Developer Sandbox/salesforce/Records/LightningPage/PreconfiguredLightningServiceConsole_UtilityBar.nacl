@@ -1,0 +1,42 @@
+salesforce.LightningPage PreconfiguredLightningServiceConsole_UtilityBar {
+  description = "The default utility bar for the Service Console application."
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "macros:macroUtilityItem"
+            identifier = "macros_macroUtilityItem"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "notes:utilityBarNoteList"
+            identifier = "notes_utilityBarNoteList"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "console:history"
+            identifier = "console_history"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "runtime_service_omnichannel:omniWidget"
+            identifier = "runtime_service_omnichannel_omniWidget"
+          }
+        },
+      ]
+      name = "utilityItems"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Service Console App Utility Bar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+  }
+  type = "UtilityBar"
+  fullName = "PreconfiguredLightningServiceConsole_UtilityBar"
+  _alias = "PreconfiguredLightningServiceConsole_UtilityBar"
+}

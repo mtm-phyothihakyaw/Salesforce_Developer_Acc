@@ -1,0 +1,84 @@
+salesforce.Flow Approver_Lookup {
+  fullName = "Approver_Lookup"
+  apiVersion = 59
+  environments = "Default"
+  interviewLabel = "Approver Lookup {!$Flow.CurrentDateTime}"
+  label = "Approver Lookup"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = {
+    name = "Search_Approver"
+    label = "Search Approver"
+    locationX = 176
+    locationY = 134
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    fields = [
+      {
+        name = "Approver"
+        extensionName = "flowruntime:lookup"
+        fieldType = "ComponentInstance"
+        inputParameters = [
+          {
+            name = "label"
+            value = {
+              stringValue = "Approver"
+            }
+          },
+          {
+            name = "objectApiName"
+            value = {
+              stringValue = "Leave_Request__c"
+            }
+          },
+          {
+            name = "maxValues"
+            value = {
+              numberValue = 1
+            }
+          },
+          {
+            name = "fieldApiName"
+            value = {
+              stringValue = "Leader_Approver__c"
+            }
+          },
+        ]
+        inputsOnNextNavToAssocScrn = "UseStoredValues"
+        isRequired = true
+        storeOutputAutomatically = true
+      },
+    ]
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "Search_Approver"
+    }
+  }
+  status = "Active"
+  _alias = "Approver Lookup"
+}

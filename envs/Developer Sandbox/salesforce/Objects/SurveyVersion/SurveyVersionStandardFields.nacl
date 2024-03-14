@@ -1,0 +1,167 @@
+type salesforce.SurveyVersion {
+  serviceid Id {
+    apiName = "SurveyVersion.Id"
+    label = "Survey Version ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyVersion.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SurveyVersion.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyVersion.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyVersion.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyVersion.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyVersion.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyVersion.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyId {
+    apiName = "SurveyVersion.SurveyId"
+    relationshipName = "Survey"
+    referenceTo = [
+      salesforce.Survey,
+    ]
+    _required = true
+    label = "Survey ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number VersionNumber {
+    apiName = "SurveyVersion.VersionNumber"
+    _required = true
+    label = "Version Number"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SurveyStatus {
+    apiName = "SurveyVersion.SurveyStatus"
+    valueSet = [
+      {
+        fullName = "Active"
+        isActive = true
+        label = "Active"
+        default = false
+      },
+      {
+        fullName = "Draft"
+        isActive = true
+        label = "Draft"
+        default = false
+      },
+      {
+        fullName = "Obsolete"
+        isActive = true
+        label = "Obsolete"
+        default = false
+      },
+      {
+        fullName = "InvalidDraft"
+        isActive = true
+        label = "InvalidDraft"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Survey Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup BrandingSetId {
+    apiName = "SurveyVersion.BrandingSetId"
+    relationshipName = "BrandingSet"
+    referenceTo = [
+      salesforce.BrandingSet,
+    ]
+    label = "Branding Set ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "SurveyVersion.Description"
+    length = 65535
+    label = "Description"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsTemplate {
+    apiName = "SurveyVersion.IsTemplate"
+    defaultValue = false
+    label = "Template"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

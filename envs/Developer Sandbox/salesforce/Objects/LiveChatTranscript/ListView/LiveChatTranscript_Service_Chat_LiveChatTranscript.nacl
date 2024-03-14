@@ -1,0 +1,13 @@
+salesforce.ListView LiveChatTranscript_Service_Chat_LiveChatTranscript {
+  fullName = "LiveChatTranscript.Service_Chat_LiveChatTranscript"
+  filterScope = "Queue"
+  label = "Service Chat"
+  queue = salesforce.Queue.instance.Service_Chat
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.LiveChatTranscript,
+  ]
+  _alias = "Service Chat"
+}

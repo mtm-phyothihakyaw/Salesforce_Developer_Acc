@@ -1,0 +1,9 @@
+salesforce.CustomTab Scheduler_Time__c {
+  fullName = "Scheduler_Time__c"
+  customObject = true
+  motif = "Custom95: Stopwatch"
+  _parent = [
+    salesforce.Scheduler_Time__c,
+  ]
+  _alias = "Scheduler_Time__c"
+}

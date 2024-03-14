@@ -1,0 +1,58 @@
+salesforce.RecordActionDeployment setup_service_experience_SupportFlows {
+  fullName = "setup_service_experience_SupportFlows"
+  channelConfigurations = {
+    channel = "Other"
+    channelItems = [
+      {
+        action = "setup_service_experience__Create_Case"
+        isMandatory = false
+        isUiRemoveHidden = false
+        pinned = "Top"
+        position = 1
+        type = "Flow"
+      },
+      {
+        action = "setup_service_experience__Verify_Cust"
+        isMandatory = false
+        isUiRemoveHidden = false
+        pinned = "Top"
+        position = 1
+        type = "Flow"
+      },
+      {
+        action = "setup_service_experience__Reset_Pwd"
+        isMandatory = false
+        isUiRemoveHidden = false
+        pinned = "Top"
+        position = 1
+        type = "Flow"
+      },
+    ]
+    isAutopopEnabled = false
+  }
+  hasGuidedActions = true
+  hasOmniscripts = false
+  hasRecommendations = false
+  masterLabel = "Support Flows"
+  selectableItems = [
+    {
+      action = "setup_service_experience__Create_Case"
+      frequentActionSequenceNbr = 0
+      isFrequentAction = false
+      type = "Flow"
+    },
+    {
+      action = "setup_service_experience__Verify_Cust"
+      frequentActionSequenceNbr = 0
+      isFrequentAction = false
+      type = "Flow"
+    },
+    {
+      action = "setup_service_experience__Reset_Pwd"
+      frequentActionSequenceNbr = 0
+      isFrequentAction = false
+      type = "Flow"
+    },
+  ]
+  _alias = "setup_service_experience_SupportFlows"
+}

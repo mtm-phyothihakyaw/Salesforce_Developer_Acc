@@ -1,0 +1,210 @@
+salesforce.Flow customer_satisfaction {
+  fullName = "customer_satisfaction"
+  choices = [
+    {
+      name = "S_52649d4b_2fbb_4aac_bbe8_3f6e8e64cc60"
+      choiceText = "3"
+      dataType = "Number"
+      value = {
+        numberValue = 3
+      }
+    },
+    {
+      name = "S_60c45899_cec0_4510_a023_c4b636ae12f0"
+      choiceText = "4"
+      dataType = "Number"
+      value = {
+        numberValue = 4
+      }
+    },
+    {
+      name = "S_6e4cc352_3361_47db_986a_5f891c31fefa"
+      choiceText = "Bad"
+      dataType = "Number"
+      value = {
+        numberValue = 1
+      }
+    },
+    {
+      name = "S_890a85b5_f744_42cb_a9c8_d5f8db95d24d"
+      choiceText = "2"
+      dataType = "Number"
+      value = {
+        numberValue = 2
+      }
+    },
+    {
+      name = "S_ed51538c_5a1c_47fb_bdb2_14c0604127b1"
+      choiceText = "Good"
+      dataType = "Number"
+      value = {
+        numberValue = 5
+      }
+    },
+  ]
+  interviewLabel = "Customer Satisfaction"
+  label = "Customer Satisfaction"
+  processMetadataValues = [
+    {
+      name = "advanceThankYouPageEnabled"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "autoProgressEnabled"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "hasWelcomePage"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "isSimpleSurvey"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "overrideActiveVersion"
+      value = {
+        booleanValue = false
+      }
+    },
+  ]
+  processType = "Survey"
+  screens = {
+    name = "surveyQuestionPage"
+    label = "Page 1"
+    locationX = 0
+    locationY = 0
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    fields = [
+      {
+        processMetadataValues = [
+          {
+            name = "autoProgressAction"
+            value = {
+              stringValue = "NONE"
+            }
+          },
+          {
+            name = "defaultValue"
+            value = {
+              elementReference = "var_q_161feca9_7a8e_4c67_9266_6a13b1abdcac_defaultValue"
+            }
+          },
+        ]
+        name = "q_161feca9_7a8e_4c67_9266_6a13b1abdcac"
+        choiceReferences = [
+          "S_6e4cc352_3361_47db_986a_5f891c31fefa",
+          "S_890a85b5_f744_42cb_a9c8_d5f8db95d24d",
+          "S_52649d4b_2fbb_4aac_bbe8_3f6e8e64cc60",
+          "S_60c45899_cec0_4510_a023_c4b636ae12f0",
+          "S_ed51538c_5a1c_47fb_bdb2_14c0604127b1",
+        ]
+        dataType = "Number"
+        extensionName = "survey:runtimeRating"
+        fieldText = "How would you rate our service?"
+        fieldType = "ComponentChoice"
+        isRequired = false
+        scale = 0
+      },
+      {
+        processMetadataValues = [
+          {
+            name = "autoProgressAction"
+            value = {
+              stringValue = "NONE"
+            }
+          },
+        ]
+        name = "q_be0ba5db_b3a4_477e_9ac1_f0a194d38af1"
+        dataType = "String"
+        fieldText = "Any comments or feedback for us?"
+        fieldType = "InputField"
+        isRequired = false
+      },
+    ]
+    pausedText = "To pick up where you left off, refresh this page, or open the survey again."
+    showFooter = true
+    showHeader = true
+  }
+  startElementReference = "surveyQuestionPage"
+  status = "Active"
+  textTemplates = [
+    {
+      name = "thankYouDescriptionTextTemplate"
+      isViewedAsPlainText = false
+      text = ""
+    },
+    {
+      name = "thankYouLabelTextTemplate"
+      isViewedAsPlainText = false
+      text = "Thanks for participating!"
+    },
+  ]
+  variables = [
+    {
+      name = "guestUserLang"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+    },
+    {
+      name = "invitationId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = ""
+      }
+    },
+    {
+      name = "previewMode"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "thankYouDescription"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = "{!thankYouDescriptionTextTemplate}"
+      }
+    },
+    {
+      name = "thankYouLabel"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = "{!thankYouLabelTextTemplate}"
+      }
+    },
+    {
+      name = "var_q_161feca9_7a8e_4c67_9266_6a13b1abdcac_defaultValue"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _alias = "Customer Satisfaction"
+}

@@ -1,0 +1,56 @@
+salesforce.KnowledgeSettings {
+  fullName = "Knowledge"
+  answers = {
+    enableArticleCreation = false
+  }
+  cases = {
+    enableArticleCreation = false
+    enableArticlePublicSharingSites = false
+    enableCaseDataCategoryMapping = true
+    useProfileForPDFCreation = false
+  }
+  defaultLanguage = "en_US"
+  enableChatterQuestionKBDeflection = false
+  enableCreateEditOnArticlesTab = true
+  enableExternalMediaContent = true
+  enableKbStandardSharing = "true"
+  enableKnowledge = true
+  enableKnowledgeAgentContribution = "false"
+  enableKnowledgeAnswersPromotion = "false"
+  enableKnowledgeArticleTextHighlights = true
+  enableKnowledgeCaseRL = "false"
+  enableKnowledgeKeywordAutoComplete = true
+  enableKnowledgeTitleAutoComplete = true
+  enableLightningKbAutoLoadRichTextField = true
+  enableLightningKnowledge = true
+  showArticleSummariesCustomerPortal = false
+  showArticleSummariesInternalApp = false
+  showArticleSummariesPartnerPortal = false
+  showValidationStatusField = true
+  suggestedArticles = {
+    caseFields = {
+      field = [
+        {
+          name = "Subject"
+        },
+      ]
+    }
+    useSuggestedArticlesForCase = false
+    workOrderFields = {
+      field = [
+        {
+          name = "Subject"
+        },
+      ]
+    }
+    workOrderLineItemFields = {
+      field = [
+        {
+          name = "Subject"
+        },
+      ]
+    }
+  }
+  votingEnabled = true
+  _alias = "Knowledge"
+}

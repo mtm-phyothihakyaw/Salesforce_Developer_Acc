@@ -1,0 +1,121 @@
+salesforce.ApprovalProcess Account_Custom_Approval_Process@vuu {
+  fullName = "Account.Custom_Approval_Process"
+  active = false
+  allowRecall = true
+  allowedSubmitters = {
+    type = "owner"
+  }
+  approvalPageFields = {
+    field = [
+      "Name",
+      "Owner",
+      "AccountNumber",
+      "Phone",
+      "Approval_Status__c",
+    ]
+  }
+  approvalStep = [
+    {
+      allowDelegate = false
+      approvalActions = {
+        action = [
+          {
+            name = "Update_Status"
+            type = "FieldUpdate"
+          },
+        ]
+      }
+      assignedApprover = {
+        approver = [
+          {
+            name = "Manager_Approver__c"
+            type = "relatedUserField"
+          },
+          {
+            name = "Leader__c"
+            type = "relatedUserField"
+          },
+          {
+            name = "BSE__c"
+            type = "relatedUserField"
+          },
+        ]
+        whenMultipleApprovers = "Unanimous"
+      }
+      entryCriteria = {
+        criteriaItems = [
+          {
+            field = salesforce.Account.field.Manager_Approver__c
+            operation = "notEqual"
+          },
+          {
+            field = salesforce.Account.field.BSE__c
+            operation = "notEqual"
+          },
+          {
+            field = salesforce.Account.field.Leader__c
+            operation = "notEqual"
+          },
+        ]
+      }
+      ifCriteriaNotMet = "RejectRecord"
+      label = "Manager Approval"
+      name = "Manager_Approval"
+    },
+  ]
+  enableMobileDeviceAccess = false
+  entryCriteria = {
+    formula = "OwnerId <> LastModifiedById"
+  }
+  finalApprovalActions = {
+    action = [
+      {
+        name = "update_field"
+        type = "FieldUpdate"
+      },
+    ]
+  }
+  finalApprovalRecordLock = true
+  finalRejectionActions = {
+    action = [
+      {
+        name = "update_status_when_reject"
+        type = "FieldUpdate"
+      },
+    ]
+  }
+  finalRejectionRecordLock = false
+  initialSubmissionActions = {
+    action = [
+      {
+        name = "update_status_0"
+        type = "FieldUpdate"
+      },
+      {
+        name = "Update_Status_1"
+        type = "FieldUpdate"
+      },
+    ]
+  }
+  label = "Custom Approval Process"
+  nextAutomatedApprover = {
+    useApproverFieldOfRecordOwner = false
+    userHierarchyField = "Manager"
+  }
+  processOrder = 1
+  recallActions = {
+    action = [
+      {
+        name = "recall"
+        type = "FieldUpdate"
+      },
+      {
+        name = "recall_2"
+        type = "FieldUpdate"
+      },
+    ]
+  }
+  recordEditability = "AdminOnly"
+  showApprovalHistory = true
+  _alias = "Custom Approval Process"
+}

@@ -1,0 +1,38 @@
+type salesforce.EmbeddedServiceQuickAction {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string embeddedServiceLiveAgent {
+    foreignKeyDomain = [
+      salesforce.EmbeddedServiceLiveAgent,
+    ]
+  }
+  number order {
+  }
+  string quickActionDefinition {
+    foreignKeyDomain = [
+      salesforce.QuickAction,
+    ]
+  }
+  string quickActionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "OfflineCase",
+        "Prechat",
+      ]
+    }
+  }
+  metadataType = "EmbeddedServiceQuickAction"
+}

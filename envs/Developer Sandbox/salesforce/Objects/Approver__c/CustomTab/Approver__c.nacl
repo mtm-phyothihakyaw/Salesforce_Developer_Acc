@@ -1,0 +1,9 @@
+salesforce.CustomTab Approver__c {
+  fullName = "Approver__c"
+  customObject = true
+  motif = "Custom15: People"
+  _parent = [
+    salesforce.Approver__c,
+  ]
+  _alias = "Approver__c"
+}

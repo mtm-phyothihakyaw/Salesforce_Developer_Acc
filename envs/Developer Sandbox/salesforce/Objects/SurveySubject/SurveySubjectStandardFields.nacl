@@ -1,0 +1,300 @@
+type salesforce.SurveySubject {
+  salesforce.Text Name {
+    apiName = "SurveySubject.Name"
+    length = 255
+    _required = true
+    label = "Record Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.MasterDetail ParentId {
+    apiName = "SurveySubject.ParentId"
+    relationshipName = "Parent"
+    referenceTo = [
+      salesforce.SurveyInvitation,
+      salesforce.SurveyResponse,
+    ]
+    _required = true
+    label = "Parent ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist SubjectEntityType {
+    apiName = "SurveySubject.SubjectEntityType"
+    valueSet = [
+      {
+        fullName = "Account"
+        isActive = true
+        label = "Account"
+        default = false
+      },
+      {
+        fullName = "Asset"
+        isActive = true
+        label = "Asset"
+        default = false
+      },
+      {
+        fullName = "Campaign"
+        isActive = true
+        label = "Campaign"
+        default = false
+      },
+      {
+        fullName = "Case"
+        isActive = true
+        label = "Case"
+        default = false
+      },
+      {
+        fullName = "Contact"
+        isActive = true
+        label = "Contact"
+        default = false
+      },
+      {
+        fullName = "Event"
+        isActive = true
+        label = "Event"
+        default = false
+      },
+      {
+        fullName = "Incident"
+        isActive = true
+        label = "Incident"
+        default = false
+      },
+      {
+        fullName = "Lead"
+        isActive = true
+        label = "Lead"
+        default = false
+      },
+      {
+        fullName = "LiveChatTranscript"
+        isActive = true
+        label = "LiveChatTranscript"
+        default = false
+      },
+      {
+        fullName = "MessagingSession"
+        isActive = true
+        label = "MessagingSession"
+        default = false
+      },
+      {
+        fullName = "Opportunity"
+        isActive = true
+        label = "Opportunity"
+        default = false
+      },
+      {
+        fullName = "Order"
+        isActive = true
+        label = "Order"
+        default = false
+      },
+      {
+        fullName = "Product2"
+        isActive = true
+        label = "Product2"
+        default = false
+      },
+      {
+        fullName = "Promotion"
+        isActive = true
+        label = "Promotion"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment"
+        isActive = true
+        label = "ServiceAppointment"
+        default = false
+      },
+      {
+        fullName = "ServiceResource"
+        isActive = true
+        label = "ServiceResource"
+        default = false
+      },
+      {
+        fullName = "Solution"
+        isActive = true
+        label = "Solution"
+        default = false
+      },
+      {
+        fullName = "Task"
+        isActive = true
+        label = "Task"
+        default = false
+      },
+      {
+        fullName = "User"
+        isActive = true
+        label = "User"
+        default = false
+      },
+      {
+        fullName = "VoiceCall"
+        isActive = true
+        label = "VoiceCall"
+        default = false
+      },
+      {
+        fullName = "WorkOrder"
+        isActive = true
+        label = "WorkOrder"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Related Object"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SubjectId {
+    apiName = "SurveySubject.SubjectId"
+    relationshipName = "Subject"
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Approver__c,
+      salesforce.Asset,
+      salesforce.Campaign,
+      salesforce.Case,
+      salesforce.Contact,
+      salesforce.Customer__c,
+      salesforce.Event,
+      salesforce.Incident,
+      salesforce.Invoice__c,
+      salesforce.Lead,
+      salesforce.Leave_Request__c,
+      salesforce.LiveChatTranscript,
+      salesforce.MessagingSession,
+      salesforce.Opportunity,
+      salesforce.Order,
+      salesforce.Product2,
+      salesforce.Promotion,
+      salesforce.Scheduler_Time__c,
+      salesforce.ServiceAppointment,
+      salesforce.ServiceResource,
+      salesforce.Solution,
+      salesforce.Task,
+      salesforce.User,
+      salesforce.VoiceCall,
+      salesforce.WorkOrder,
+    ]
+    _required = true
+    label = "Subject ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup SurveyId {
+    apiName = "SurveySubject.SurveyId"
+    relationshipName = "Survey"
+    referenceTo = [
+      salesforce.Survey,
+    ]
+    _required = true
+    label = "Survey ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "SurveySubject.Id"
+    label = "Object Relationship ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveySubject.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveySubject.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveySubject.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveySubject.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveySubject.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveySubject.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyResponseId {
+    apiName = "SurveySubject.SurveyResponseId"
+    relationshipName = "SurveyResponse"
+    referenceTo = [
+      salesforce.SurveyResponse,
+    ]
+    label = "Survey Response ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyInvitationId {
+    apiName = "SurveySubject.SurveyInvitationId"
+    relationshipName = "SurveyInvitation"
+    referenceTo = [
+      salesforce.SurveyInvitation,
+    ]
+    label = "Survey Invitation ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

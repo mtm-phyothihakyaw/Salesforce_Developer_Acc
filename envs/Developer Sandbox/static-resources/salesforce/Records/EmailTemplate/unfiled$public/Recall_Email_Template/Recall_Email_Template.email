@@ -1,0 +1,3 @@
+<p>Hello <b>{!User.Username}</b>,</p>
+
+<p>This request has been recalled : <b>{!Account.Name}</b>.</p>

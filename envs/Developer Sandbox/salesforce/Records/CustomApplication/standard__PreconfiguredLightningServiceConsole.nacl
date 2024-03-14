@@ -1,0 +1,112 @@
+salesforce.CustomApplication standard__PreconfiguredLightningServiceConsole {
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Service Console — METATEAM MYANMAR"
+  navType = "Console"
+  profileActionOverrides = [
+    {
+      actionName = "View"
+      content = "CaseDefault_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Case"
+      type = "Flexipage"
+      profile = "Service Agent"
+    },
+    {
+      actionName = "View"
+      content = "CaseDefault_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Case"
+      type = "Flexipage"
+      profile = "Service Supervisor"
+    },
+    {
+      actionName = "View"
+      content = "CaseDefault_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Case"
+      type = "Flexipage"
+      profile = "Admin"
+    },
+  ]
+  tabs = [
+    "standard-Case",
+    "standard-home",
+    "standard-Contact",
+    "standard-Account",
+    "standard-LiveChatTranscript",
+    "standard-MessagingSession",
+    "standard-OmniSupervisor",
+    "standard-CmsWorkspaces",
+    "standard-CmsExperiences",
+    "standard-Macro",
+    "standard-LightningQuickText",
+    "standard-Survey",
+    salesforce.CustomTab.instance.Knowledge__kav,
+    salesforce.CustomTab.instance.Leave_Request__c,
+    salesforce.CustomTab.instance.Approver__c,
+  ]
+  uiType = "Lightning"
+  utilityBar = "PreconfiguredLightningServiceConsole_UtilityBar"
+  workspaceConfig = {
+    mappings = [
+      {
+        tab = salesforce.CustomTab.instance.Approver__c
+      },
+      {
+        tab = salesforce.CustomTab.instance.Knowledge__kav
+      },
+      {
+        tab = salesforce.CustomTab.instance.Leave_Request__c
+      },
+      {
+        tab = "standard-Account"
+      },
+      {
+        tab = "standard-Case"
+      },
+      {
+        tab = "standard-CmsExperiences"
+      },
+      {
+        tab = "standard-CmsWorkspaces"
+      },
+      {
+        tab = "standard-Contact"
+      },
+      {
+        tab = "standard-LightningQuickText"
+      },
+      {
+        tab = "standard-LiveChatTranscript"
+      },
+      {
+        tab = "standard-Macro"
+      },
+      {
+        tab = "standard-MessagingSession"
+      },
+      {
+        tab = "standard-OmniSupervisor"
+      },
+      {
+        tab = "standard-Survey"
+      },
+      {
+        tab = "standard-home"
+      },
+    ]
+  }
+  fullName = "standard__PreconfiguredLightningServiceConsole"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.PreconfiguredLightningServiceConsole_UtilityBar
+    },
+  ]
+  _alias = "Service Console — METATEAM MYANMAR (standard)"
+}

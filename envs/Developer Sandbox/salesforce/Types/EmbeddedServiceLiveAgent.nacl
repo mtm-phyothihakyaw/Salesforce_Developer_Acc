@@ -1,0 +1,100 @@
+type salesforce.EmbeddedServiceLiveAgent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string avatarImg {
+  }
+  string embeddedServiceConfig {
+    foreignKeyDomain = [
+      salesforce.EmbeddedServiceConfig,
+    ]
+  }
+  salesforce.EmbeddedServiceQuickAction embeddedServiceQuickActions {
+  }
+  boolean enabled {
+  }
+  string fontSize {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Large",
+        "Medium",
+        "Small",
+      ]
+    }
+  }
+  boolean isOfflineCaseEnabled {
+  }
+  boolean isQueuePositionEnabled {
+  }
+  string liveAgentChatUrl {
+  }
+  string liveAgentContentUrl {
+  }
+  string liveChatButton {
+    foreignKeyDomain = [
+      salesforce.LiveChatButton,
+    ]
+  }
+  string liveChatDeployment {
+    foreignKeyDomain = [
+      salesforce.LiveChatDeployment,
+    ]
+  }
+  string masterLabel {
+  }
+  string offlineCaseBackgroundImg {
+  }
+  string prechatBackgroundImg {
+  }
+  boolean prechatEnabled {
+  }
+  string prechatJson {
+  }
+  string scenario {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Basic",
+        "Sales",
+        "Service",
+      ]
+    }
+  }
+  string smallCompanyLogoImg {
+  }
+  string waitingStateBackgroundImg {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "EmbeddedServiceLiveAgent"
+  dirName = "EmbeddedServiceLiveAgent"
+  metadataType = "EmbeddedServiceLiveAgent"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

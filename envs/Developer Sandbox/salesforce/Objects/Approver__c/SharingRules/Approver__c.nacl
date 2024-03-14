@@ -1,0 +1,7 @@
+salesforce.SharingRules Approver__c {
+  fullName = "Approver__c"
+  _parent = [
+    salesforce.Approver__c,
+  ]
+  _alias = "Approver__c"
+}

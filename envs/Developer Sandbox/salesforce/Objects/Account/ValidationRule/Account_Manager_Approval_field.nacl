@@ -1,0 +1,11 @@
+salesforce.ValidationRule Account_Manager_Approval_field {
+  fullName = "Account.Manager_Approval_field"
+  active = true
+  errorConditionFormula = "(Manager_Approver__r.Username  = null && BSE__r.Username  = null && Leader__r.Username = null)"
+  errorDisplayField = salesforce.Account.field.Manager_Approver__c
+  errorMessage = "Manager can't be null"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.Manager_Approval_field"
+}

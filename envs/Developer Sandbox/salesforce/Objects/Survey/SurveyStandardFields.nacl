@@ -1,0 +1,190 @@
+type salesforce.Survey {
+  serviceid Id {
+    apiName = "Survey.Id"
+    label = "Survey ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Survey.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Survey.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Survey.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Survey.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Survey.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Survey.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Survey.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Survey.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalVersionsCount {
+    apiName = "Survey.TotalVersionsCount"
+    label = "Number of Versions"
+    precision = 9
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DeveloperName {
+    apiName = "Survey.DeveloperName"
+    length = 80
+    _required = true
+    label = "Developer Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Survey.Description"
+    length = 65535
+    label = "Description"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ActiveVersionId {
+    apiName = "Survey.ActiveVersionId"
+    relationshipName = "ActiveVersion"
+    referenceTo = [
+      salesforce.SurveyVersion,
+    ]
+    label = "Survey Version ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SurveyType {
+    apiName = "Survey.SurveyType"
+    valueSet = [
+      {
+        fullName = "Survey"
+        isActive = true
+        label = "Survey"
+        default = true
+      },
+      {
+        fullName = "Form"
+        isActive = true
+        label = "Form"
+        default = false
+      },
+      {
+        fullName = "Basic"
+        isActive = true
+        label = "Basic"
+        default = false
+      },
+      {
+        fullName = "Assessment"
+        isActive = true
+        label = "Assessment"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LatestVersionId {
+    apiName = "Survey.LatestVersionId"
+    relationshipName = "LatestVersion"
+    referenceTo = [
+      salesforce.SurveyVersion,
+    ]
+    label = "Survey Version ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text NamespacePrefix {
+    apiName = "Survey.NamespacePrefix"
+    length = 255
+    label = "Namespace Prefix"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

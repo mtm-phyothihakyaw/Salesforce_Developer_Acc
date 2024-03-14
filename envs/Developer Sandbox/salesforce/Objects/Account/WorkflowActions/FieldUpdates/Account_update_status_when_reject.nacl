@@ -1,0 +1,14 @@
+salesforce.WorkflowFieldUpdate Account_update_status_when_reject@vuuu {
+  fullName = "Account.update_status_when_reject"
+  field = salesforce.Account.field.Approval_Status__c
+  literalValue = "Rejected"
+  name = "update status when reject"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.update_status_when_reject"
+}

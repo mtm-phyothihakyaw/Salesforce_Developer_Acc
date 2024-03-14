@@ -1,0 +1,14 @@
+salesforce.EmailTemplate unfiled_public_Case_Created_or_Updated_Sample_1694404950866@zcduuuuu {
+  available = true
+  description = "Sent to case contact when case is created or updated"
+  encodingKey = "UTF-8"
+  name = "Case Created or Updated (Sample)"
+  relatedEntityType = "Case"
+  style = "none"
+  subject = "We’ve received your request"
+  type = "custom"
+  uiType = "SFX"
+  fullName = "unfiled$public/Case_Created_or_Updated_Sample_1694404950866"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Case_Created_or_Updated_Sample_1694404950866/Case_Created_or_Updated_Sample_1694404950866.email")
+  _alias = "unfiled$public/Case_Created_or_Updated_Sample_1694404950866"
+}

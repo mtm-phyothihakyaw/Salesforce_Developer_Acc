@@ -1,0 +1,310 @@
+salesforce.Layout Knowledge__kav_Knowledge_Layout@uubs {
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.Title
+            },
+            {
+              field = salesforce.Knowledge__kav.field.Summary
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.UrlName
+            },
+            {
+              field = salesforce.Knowledge__kav.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Article Detail"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.Question__c
+            },
+            {
+              field = salesforce.Knowledge__kav.field.Content__c
+            },
+            {
+              field = salesforce.Knowledge__kav.field.InternalNotes__c
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Digital Engagement Response"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.DigitalEngagementResponse__c
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Visible to"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.IsVisibleInApp
+            },
+            {
+              field = salesforce.Knowledge__kav.field.IsVisibleInPkb
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.IsVisibleInCsp
+            },
+            {
+              field = salesforce.Knowledge__kav.field.IsVisibleInPrm
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Properties"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.ArticleCreatedDate
+            },
+            {
+              field = salesforce.Knowledge__kav.field.ArticleCreatedById
+            },
+            {
+              field = salesforce.Knowledge__kav.field.CreatedDate
+            },
+            {
+              field = salesforce.Knowledge__kav.field.CreatedById
+            },
+            {
+              field = salesforce.Knowledge__kav.field.LastModifiedDate
+            },
+            {
+              field = salesforce.Knowledge__kav.field.LastModifiedById
+            },
+            {
+              field = salesforce.Knowledge__kav.field.LastPublishedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.PublishStatus
+            },
+            {
+              field = salesforce.Knowledge__kav.field.ArticleTotalViewCount
+            },
+            {
+              field = salesforce.Knowledge__kav.field.ArticleCaseAttachCount
+            },
+            {
+              field = salesforce.Knowledge__kav.field.ArticleArchivedDate
+            },
+            {
+              field = salesforce.Knowledge__kav.field.ArticleArchivedById
+            },
+            {
+              field = salesforce.Knowledge__kav.field.ArchivedDate
+            },
+            {
+              field = salesforce.Knowledge__kav.field.ArchivedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Assignment"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.AssignedToId
+            },
+            {
+              field = salesforce.Knowledge__kav.field.AssignmentDueDate
+            },
+            {
+              field = salesforce.Knowledge__kav.field.AssignmentNote
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              field = salesforce.Knowledge__kav.field.AssignedById
+            },
+            {
+              field = salesforce.Knowledge__kav.field.AssignmentDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = "EditDraftKnowledgeArticleVersion"
+        actionType = "StandardButton"
+        sortOrder = 0
+      },
+      {
+        actionName = "DeleteDraftKnowledgeArticleVersion"
+        actionType = "StandardButton"
+        sortOrder = 1
+      },
+      {
+        actionName = "AssignKnowledgeArticleVersion"
+        actionType = "StandardButton"
+        sortOrder = 2
+      },
+      {
+        actionName = "PublishKnowledgeArticleVersion"
+        actionType = "StandardButton"
+        sortOrder = 3
+      },
+      {
+        actionName = "SubmitKnowledgeArticleVersionForApproval"
+        actionType = "StandardButton"
+        sortOrder = 4
+      },
+      {
+        actionName = "ChangeKnowledgeArticleVersionRecordType"
+        actionType = "StandardButton"
+        sortOrder = 5
+      },
+      {
+        actionName = "ChangeKnowledgeArticleVersionOwner"
+        actionType = "StandardButton"
+        sortOrder = 6
+      },
+      {
+        actionName = "CreateDraftFromOnlineKnowledgeArticleVersion"
+        actionType = "StandardButton"
+        sortOrder = 7
+      },
+      {
+        actionName = "ArchiveKnowledgeArticleVersion"
+        actionType = "StandardButton"
+        sortOrder = 8
+      },
+      {
+        actionName = "RestoreKnowledgeArticleVersion"
+        actionType = "StandardButton"
+        sortOrder = 9
+      },
+      {
+        actionName = "SubmitKnowledgeArticleVersionForTranslation"
+        actionType = "StandardButton"
+        sortOrder = 10
+      },
+      {
+        actionName = "DeleteArchiveKnowledgeArticleVersion"
+        actionType = "StandardButton"
+        sortOrder = 11
+      },
+      {
+        actionName = "FeedItem.TextPost"
+        actionType = "QuickAction"
+        sortOrder = 12
+      },
+      {
+        actionName = "FeedItem.PollPost"
+        actionType = "QuickAction"
+        sortOrder = 13
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "KnowledgeArticleVersionFilesRelatedList"
+    },
+    {
+      fields = [
+        "CASES.SUBJECT",
+        "CASES.CASE_NUMBER",
+        "CASES.CREATED_DATE",
+      ]
+      relatedList = "KnowledgeArticleCaseRelatedList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      fields = [
+        "Query",
+      ]
+      relatedList = "KavSearchPromotionRuleRelatedList"
+    },
+  ]
+  fullName = "Knowledge__kav-Knowledge Layout"
+  _parent = [
+    salesforce.Knowledge__kav,
+  ]
+  _alias = "Knowledge__kav-Knowledge Layout"
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules Scheduler_Time__c {
+  fullName = "Scheduler_Time__c"
+  _parent = [
+    salesforce.Scheduler_Time__c,
+  ]
+  _alias = "Scheduler_Time__c"
+}

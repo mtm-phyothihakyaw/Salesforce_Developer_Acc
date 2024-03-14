@@ -1,0 +1,17 @@
+salesforce.WorkflowAlert Account_Approve_mail@vu {
+  fullName = "Account.Approve_mail"
+  description = "Approve mail"
+  protected = false
+  recipients = [
+    {
+      field = salesforce.Account.field.LastModifiedById
+      type = "userLookup"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = salesforce.EmailTemplate.instance.unfiled_public_Approved_Mail@zcdu
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.Approve_mail"
+}

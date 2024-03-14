@@ -1,0 +1,7 @@
+salesforce.SharingRules Leave_Request__c {
+  fullName = "Leave_Request__c"
+  _parent = [
+    salesforce.Leave_Request__c,
+  ]
+  _alias = "Leave_Request__c"
+}

@@ -1,0 +1,133 @@
+salesforce.Layout LiveAgentSession_Chat_Session_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveAgentSession.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LiveAgentSession.field.LoginTime
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LiveAgentSession.field.AgentId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LiveAgentSession.field.LogoutTime
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Session Time Metrics"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.TimeInOnlineStatus
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.TimeInChats
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.TimeAtCapacity
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.TimeIdle
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.TimeInAwayStatus
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Session Activity Metrics"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.ChatReqAssigned
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.ChatReqEngaged
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.NumFlagRaised
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.ChatReqDeclined
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.ChatReqTimedOut
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.NumFlagLoweredAgent
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveAgentSession.field.NumFlagLoweredSupervisor
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "LiveAgentSession-Chat Session Layout"
+  _parent = [
+    salesforce.LiveAgentSession,
+  ]
+  _alias = "LiveAgentSession-Chat Session Layout"
+}

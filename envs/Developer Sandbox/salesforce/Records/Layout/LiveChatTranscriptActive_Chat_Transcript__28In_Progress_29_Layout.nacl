@@ -1,0 +1,202 @@
+salesforce.Layout LiveChatTranscriptActive_Chat_Transcript__28In_Progress_29_Layout@bsspsps {
+  customConsoleComponents = {
+    primaryTabComponents = {
+      containers = {
+        height = 25
+        isContainerAutoSizeEnabled = true
+        region = "Right"
+        sidebarComponents = [
+          {
+            componentType = "Lookup"
+            createAction = "NewAccount"
+            enableLinking = true
+            height = 100
+            lookup = "Account"
+            unit = "Percentage"
+          },
+          {
+            componentType = "Lookup"
+            createAction = "NewCase"
+            enableLinking = true
+            height = 100
+            lookup = "Case"
+            unit = "Percentage"
+          },
+          {
+            componentType = "Lookup"
+            createAction = "NewContact"
+            enableLinking = true
+            height = 100
+            lookup = "Contact"
+            unit = "Percentage"
+          },
+          {
+            componentType = "Lookup"
+            createAction = "NewLead"
+            enableLinking = true
+            height = 100
+            lookup = "Lead"
+            unit = "Percentage"
+          },
+        ]
+        style = "Stack"
+        unit = "Pixel"
+        width = 340
+      }
+    }
+  }
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "Name"
+            },
+            {
+              behavior = "Readonly"
+              field = "RequestTime"
+            },
+            {
+              emptySpace = true
+            },
+            {
+              emptySpace = true
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "Status"
+            },
+            {
+              behavior = "Readonly"
+              field = "LiveChatDeploymentId"
+            },
+            {
+              behavior = "Readonly"
+              field = "LiveChatButtonId"
+            },
+            {
+              behavior = "Readonly"
+              field = "SkillId"
+            },
+            {
+              behavior = "Readonly"
+              field = "OwnerId"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Attached Records"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "CaseId"
+            },
+            {
+              behavior = "Edit"
+              field = "ContactId"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "AccountId"
+            },
+            {
+              behavior = "Edit"
+              field = "LeadId"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Visitor Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "LiveChatVisitorId"
+            },
+            {
+              behavior = "Edit"
+              field = "Location"
+            },
+            {
+              behavior = "Edit"
+              field = "IpAddress"
+            },
+            {
+              behavior = "Edit"
+              field = "ReferrerUri"
+            },
+            {
+              behavior = "Edit"
+              field = "VisitorNetwork"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "Browser"
+            },
+            {
+              behavior = "Edit"
+              field = "BrowserLanguage"
+            },
+            {
+              behavior = "Edit"
+              field = "Platform"
+            },
+            {
+              behavior = "Edit"
+              field = "ScreenResolution"
+            },
+            {
+              behavior = "Edit"
+              field = "UserAgent"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "LiveChatTranscriptActive-Chat Transcript %28In Progress%29 Layout"
+  _alias = "LiveChatTranscriptActive-Chat Transcript %28In Progress%29 Layout"
+}

@@ -1,0 +1,31 @@
+salesforce.CustomSite Default_Help_Center {
+  fullName = "Default_Help_Center"
+  active = true
+  allowGuestPaymentsApi = "false"
+  allowHomePage = false
+  allowStandardAnswersPages = false
+  allowStandardIdeasPages = false
+  allowStandardLookups = false
+  allowStandardPortalPages = true
+  allowStandardSearch = false
+  authorizationRequiredPage = salesforce.ApexPage.instance.CommunitiesLogin
+  bandwidthExceededPage = salesforce.ApexPage.instance.BandwidthExceeded
+  browserXssProtection = true
+  cachePublicVisualforcePagesInProxyServers = true
+  clickjackProtectionLevel = "SameOriginOnly"
+  contentSniffingProtection = true
+  enableAuraRequests = true
+  fileNotFoundPage = salesforce.ApexPage.instance.FileNotFound
+  genericErrorPage = salesforce.ApexPage.instance.Exception
+  inMaintenancePage = salesforce.ApexPage.instance.InMaintenance
+  indexPage = salesforce.ApexPage.instance.CommunitiesLanding
+  masterLabel = "Default Help Center"
+  redirectToCustomDomain = false
+  referrerPolicyOriginWhenCrossOrigin = true
+  selfRegPage = salesforce.ApexPage.instance.CommunitiesSelfReg
+  siteAdmin = "virusstone0805@gmail.com.leader"
+  siteGuestRecordDefaultOwner = "virusstone0805@gmail.com.leader"
+  siteType = "ChatterNetwork"
+  urlPathPrefix = "defaulthelpcenter11Sep"
+  _alias = "Default_Help_Center"
+}

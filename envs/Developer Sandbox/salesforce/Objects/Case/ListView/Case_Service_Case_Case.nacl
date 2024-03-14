@@ -1,0 +1,13 @@
+salesforce.ListView Case_Service_Case_Case {
+  fullName = "Case.Service_Case_Case"
+  filterScope = "Queue"
+  label = "Service Case"
+  queue = salesforce.Queue.instance.Service_Case
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "Service Case"
+}

@@ -1,0 +1,41 @@
+type salesforce.Scheduler_Time__c {
+  salesforce.Checkbox Run_Daily__c {
+    apiName = "Scheduler_Time__c.Run_Daily__c"
+    defaultValue = false
+    externalId = false
+    label = "Run Daily"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox Run_Monthly__c {
+    apiName = "Scheduler_Time__c.Run_Monthly__c"
+    defaultValue = false
+    externalId = false
+    label = "Run Monthly"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox Run_Weekly__c {
+    apiName = "Scheduler_Time__c.Run_Weekly__c"
+    defaultValue = false
+    externalId = false
+    label = "Run Weekly"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime Schedule_Date_Time__c {
+    apiName = "Scheduler_Time__c.Schedule_Date_Time__c"
+    externalId = false
+    label = "Schedule Date Time"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

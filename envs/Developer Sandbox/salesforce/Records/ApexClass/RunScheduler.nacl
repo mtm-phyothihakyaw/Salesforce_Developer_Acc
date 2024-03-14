@@ -1,0 +1,24 @@
+salesforce.ApexClass RunScheduler {
+  apiVersion = 58
+  status = "Active"
+  fullName = "RunScheduler"
+  content = file("salesforce/Records/ApexClass/RunScheduler.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Scheduler_Time__c
+    },
+    {
+      reference = salesforce.Scheduler_Time__c.field.Run_Daily__c
+    },
+    {
+      reference = salesforce.Scheduler_Time__c.field.Run_Monthly__c
+    },
+    {
+      reference = salesforce.Scheduler_Time__c.field.Run_Weekly__c
+    },
+    {
+      reference = salesforce.Scheduler_Time__c.field.Schedule_Date_Time__c
+    },
+  ]
+  _alias = "RunScheduler"
+}

@@ -1,0 +1,17 @@
+salesforce.CompactLayout Knowledge__kav_Knowledgekav {
+  fullName = "Knowledge__kav.Knowledgekav"
+  fields = [
+    "Title",
+    "ArticleNumber",
+    "VersionNumber",
+    "IsLatestVersion",
+    "LastModifiedDate",
+    "PublishStatus",
+    "Language",
+  ]
+  label = "Knowledge Layout (Preconfigured)"
+  _parent = [
+    salesforce.Knowledge__kav,
+  ]
+  _alias = "Knowledge Layout (Preconfigured)"
+}

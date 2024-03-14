@@ -1,0 +1,234 @@
+type salesforce.LiveAgentSession {
+  salesforce.Lookup AgentId {
+    apiName = "LiveAgentSession.AgentId"
+    relationshipName = "Agent"
+    referenceTo = [
+      salesforce.User,
+    ]
+    _required = true
+    label = "User ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number ChatReqAssigned {
+    apiName = "LiveAgentSession.ChatReqAssigned"
+    label = "Chat Requests Assigned"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number ChatReqDeclined {
+    apiName = "LiveAgentSession.ChatReqDeclined"
+    label = "Chat Requests Declined (Manually)"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number ChatReqEngaged {
+    apiName = "LiveAgentSession.ChatReqEngaged"
+    label = "Chat Requests Engaged"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number ChatReqTimedOut {
+    apiName = "LiveAgentSession.ChatReqTimedOut"
+    label = "Chat Requests Declined (Push Timeout)"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.DateTime LoginTime {
+    apiName = "LiveAgentSession.LoginTime"
+    _required = true
+    label = "Login Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime LogoutTime {
+    apiName = "LiveAgentSession.LogoutTime"
+    _required = true
+    label = "Logout Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number NumFlagLoweredAgent {
+    apiName = "LiveAgentSession.NumFlagLoweredAgent"
+    label = "Assistance Flags Lowered (Agent)"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number NumFlagLoweredSupervisor {
+    apiName = "LiveAgentSession.NumFlagLoweredSupervisor"
+    label = "Assistance Flags Lowered (Supervisor)"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number NumFlagRaised {
+    apiName = "LiveAgentSession.NumFlagRaised"
+    label = "Assistance Flags Raised"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LiveAgentSession.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number TimeAtCapacity {
+    apiName = "LiveAgentSession.TimeAtCapacity"
+    label = "Time Spent at Capacity"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TimeIdle {
+    apiName = "LiveAgentSession.TimeIdle"
+    label = "Time Idle"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TimeInAwayStatus {
+    apiName = "LiveAgentSession.TimeInAwayStatus"
+    label = "Time Spent Away"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TimeInChats {
+    apiName = "LiveAgentSession.TimeInChats"
+    label = "Time Spent in Chats"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TimeInOnlineStatus {
+    apiName = "LiveAgentSession.TimeInOnlineStatus"
+    label = "Time Spent Online"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LiveAgentSession.Id"
+    label = "Chat Session ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveAgentSession.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveAgentSession.Name"
+    label = "Chat Session Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveAgentSession.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveAgentSession.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveAgentSession.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveAgentSession.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveAgentSession.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

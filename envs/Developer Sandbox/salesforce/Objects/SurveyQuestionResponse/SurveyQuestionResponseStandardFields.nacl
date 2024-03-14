@@ -1,0 +1,251 @@
+type salesforce.SurveyQuestionResponse {
+  serviceid Id {
+    apiName = "SurveyQuestionResponse.Id"
+    label = "Survey Question Response ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyQuestionResponse.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ResponseShortText {
+    apiName = "SurveyQuestionResponse.ResponseShortText"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyQuestionResponse.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyQuestionResponse.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyQuestionResponse.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyQuestionResponse.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyQuestionResponse.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ResponseId {
+    apiName = "SurveyQuestionResponse.ResponseId"
+    relationshipName = "Response"
+    referenceTo = [
+      salesforce.SurveyResponse,
+    ]
+    _required = true
+    label = "Survey Response ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup QuestionId {
+    apiName = "SurveyQuestionResponse.QuestionId"
+    relationshipName = "Question"
+    referenceTo = [
+      "SurveyQuestion",
+    ]
+    label = "Survey Question ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup QuestionChoiceId {
+    apiName = "SurveyQuestionResponse.QuestionChoiceId"
+    relationshipName = "QuestionChoice"
+    referenceTo = [
+      salesforce.SurveyQuestionChoice,
+    ]
+    label = "Survey Question Choice ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyVersionId {
+    apiName = "SurveyQuestionResponse.SurveyVersionId"
+    relationshipName = "SurveyVersion"
+    referenceTo = [
+      salesforce.SurveyVersion,
+    ]
+    _required = true
+    label = "Survey Version ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup InvitationId {
+    apiName = "SurveyQuestionResponse.InvitationId"
+    relationshipName = "Invitation"
+    referenceTo = [
+      salesforce.SurveyInvitation,
+    ]
+    label = "Survey Invitation ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Datatype {
+    apiName = "SurveyQuestionResponse.Datatype"
+    valueSet = [
+      {
+        fullName = "String"
+        isActive = true
+        label = "String"
+        default = false
+      },
+      {
+        fullName = "Number"
+        isActive = true
+        label = "Number"
+        default = false
+      },
+      {
+        fullName = "Date"
+        isActive = true
+        label = "Date"
+        default = false
+      },
+      {
+        fullName = "Int"
+        isActive = true
+        label = "Int"
+        default = false
+      },
+      {
+        fullName = "Double"
+        isActive = true
+        label = "Double"
+        default = false
+      },
+      {
+        fullName = "Boolean"
+        isActive = true
+        label = "Boolean"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Data Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Rank {
+    apiName = "SurveyQuestionResponse.Rank"
+    label = "Rank"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date DateValue {
+    apiName = "SurveyQuestionResponse.DateValue"
+    label = "Date Value"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime DateTimeValue {
+    apiName = "SurveyQuestionResponse.DateTimeValue"
+    label = "Date Time Value"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea ChoiceValue {
+    apiName = "SurveyQuestionResponse.ChoiceValue"
+    length = 1000
+    label = "Choice Value"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea ResponseValue {
+    apiName = "SurveyQuestionResponse.ResponseValue"
+    length = 32000
+    label = "Response Value"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsTrueOrFalse {
+    apiName = "SurveyQuestionResponse.IsTrueOrFalse"
+    defaultValue = false
+    label = "True or False"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number NumberValue {
+    apiName = "SurveyQuestionResponse.NumberValue"
+    label = "Number Value"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+}

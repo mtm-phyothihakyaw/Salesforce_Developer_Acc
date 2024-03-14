@@ -1,0 +1,263 @@
+type salesforce.SurveyInvitation {
+  salesforce.Lookup CommunityId {
+    apiName = "SurveyInvitation.CommunityId"
+    relationshipName = "Community"
+    referenceTo = [
+      salesforce.Network,
+    ]
+    label = "Network ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup EmailBrandingId {
+    apiName = "SurveyInvitation.EmailBrandingId"
+    relationshipName = "EmailBranding"
+    referenceTo = [
+      "SurveyEmailBranding",
+    ]
+    label = "Survey Email Branding ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Url InvitationLink {
+    apiName = "SurveyInvitation.InvitationLink"
+    label = "Invitation Link"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime InviteExpiryDateTime {
+    apiName = "SurveyInvitation.InviteExpiryDateTime"
+    label = "Invitation Expires On"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "SurveyInvitation.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "SurveyInvitation.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ParticipantId {
+    apiName = "SurveyInvitation.ParticipantId"
+    relationshipName = "Participant"
+    referenceTo = [
+      salesforce.Contact,
+      salesforce.Lead,
+      salesforce.User,
+    ]
+    label = "Participant ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist ResponseStatus {
+    apiName = "SurveyInvitation.ResponseStatus"
+    valueSet = [
+      {
+        fullName = "NotStarted"
+        isActive = true
+        label = "Not Started"
+        default = false
+      },
+      {
+        fullName = "Started"
+        isActive = true
+        label = "Started"
+        default = false
+      },
+      {
+        fullName = "Paused"
+        isActive = true
+        label = "Paused"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Response Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyId {
+    apiName = "SurveyInvitation.SurveyId"
+    relationshipName = "Survey"
+    referenceTo = [
+      salesforce.Survey,
+    ]
+    _required = true
+    label = "Survey ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "SurveyInvitation.Id"
+    label = "Survey Invitation ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyInvitation.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyInvitation.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyInvitation.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyInvitation.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyInvitation.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyInvitation.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowParticipantAccessTheirResponse {
+    apiName = "SurveyInvitation.OptionsAllowParticipantAccessTheirResponse"
+    label = "Can See Their Response"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox OptionsCollectAnonymousResponse {
+    apiName = "SurveyInvitation.OptionsCollectAnonymousResponse"
+    label = "Can Respond Anonymously"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox OptionsAllowGuestUserResponse {
+    apiName = "SurveyInvitation.OptionsAllowGuestUserResponse"
+    label = "Let Guests Respond"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsDefault {
+    apiName = "SurveyInvitation.IsDefault"
+    defaultValue = false
+    label = "Is Default"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text UUID {
+    apiName = "SurveyInvitation.UUID"
+    length = 36
+    label = "UUID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "SurveyInvitation.UserId"
+    relationshipName = "User"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "User ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LeadId {
+    apiName = "SurveyInvitation.LeadId"
+    relationshipName = "Lead"
+    referenceTo = [
+      salesforce.Lead,
+    ]
+    label = "Lead ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "SurveyInvitation.ContactId"
+    relationshipName = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    label = "Contact ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

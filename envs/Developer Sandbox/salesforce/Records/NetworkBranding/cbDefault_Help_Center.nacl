@@ -1,0 +1,15 @@
+salesforce.NetworkBranding cbDefault_Help_Center {
+  network = "Default Help Center"
+  primaryColor = "#1797C0"
+  primaryComplementColor = "#FFFFFF"
+  quaternaryColor = "#B1BAC1"
+  quaternaryComplementColor = "#222222"
+  secondaryColor = "#51606E"
+  tertiaryColor = "#DDE4E9"
+  tertiaryComplementColor = "#222222"
+  zeronaryColor = "#51606E"
+  zeronaryComplementColor = "#FFFFFF"
+  fullName = "cbDefault_Help_Center"
+  content = file("salesforce/Records/NetworkBranding/cbDefault_Help_Center.networkBranding")
+  _alias = "cbDefault_Help_Center"
+}

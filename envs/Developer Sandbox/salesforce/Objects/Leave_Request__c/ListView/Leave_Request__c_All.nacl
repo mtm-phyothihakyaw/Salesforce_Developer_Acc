@@ -1,0 +1,9 @@
+salesforce.ListView Leave_Request__c_All {
+  fullName = "Leave_Request__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Leave_Request__c,
+  ]
+  _alias = "All"
+}

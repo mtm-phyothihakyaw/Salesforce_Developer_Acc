@@ -1,0 +1,19 @@
+type salesforce.LiveChatDeploymentDomainWhitelist {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string domain {
+  }
+  metadataType = "LiveChatDeploymentDomainWhitelist"
+}

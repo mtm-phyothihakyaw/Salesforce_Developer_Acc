@@ -1,0 +1,9 @@
+salesforce.Role Manager {
+  fullName = "Manager"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  mayForecastManagerShare = false
+  name = "Manager"
+  opportunityAccessLevel = "Edit"
+  _alias = "Manager"
+}

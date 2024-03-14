@@ -1,0 +1,7 @@
+salesforce.SharingRules Invoice__c {
+  fullName = "Invoice__c"
+  _parent = [
+    salesforce.Invoice__c,
+  ]
+  _alias = "Invoice__c"
+}

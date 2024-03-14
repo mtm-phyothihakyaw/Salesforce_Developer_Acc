@@ -1,0 +1,7 @@
+salesforce.UserCriteria Default_Help_Center_Customer_Members@ssvu {
+  fullName = "Default Help Center.Customer_Members"
+  description = "Member criteria matches customer members"
+  masterLabel = "Customer Members"
+  userTypes = "Customer"
+  _alias = "Default Help Center.Customer_Members"
+}

@@ -1,0 +1,83 @@
+salesforce.Flow Update_Leave_Request_Approver {
+  fullName = "Update_Leave_Request_Approver"
+  apiVersion = 58
+  environments = "Default"
+  interviewLabel = "Update Leave Request Approver {!$Flow.CurrentDateTime}"
+  label = "Update Leave Request Approver"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordUpdates = [
+    {
+      name = "Update_Leave_Request"
+      label = "Update Leave Request"
+      locationX = 176
+      locationY = 323
+      inputAssignments = [
+        {
+          field = "Leader_Approver_User__c"
+          value = {
+            elementReference = "$Record.Leader_Approver__r.User__r.Id"
+          }
+        },
+        {
+          field = "Manager_Approver_User__c"
+          value = {
+            elementReference = "$Record.Manager_Approver__r.User__r.Id"
+          }
+        },
+      ]
+      inputReference = "$Record"
+    },
+  ]
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "Update_Leave_Request"
+    }
+    object = salesforce.Leave_Request__c
+    recordTriggerType = "CreateAndUpdate"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Active"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Approver__c
+    },
+    {
+      reference = salesforce.Approver__c.field.User__c
+    },
+    {
+      reference = salesforce.Leave_Request__c.field.Leader_Approver_User__c
+    },
+    {
+      reference = salesforce.Leave_Request__c.field.Leader_Approver__c
+    },
+    {
+      reference = salesforce.Leave_Request__c.field.Manager_Approver_User__c
+    },
+    {
+      reference = salesforce.Leave_Request__c.field.Manager_Approver__c
+    },
+  ]
+  _alias = "Update Leave Request Approver"
+}

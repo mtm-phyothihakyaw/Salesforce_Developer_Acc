@@ -1,0 +1,7 @@
+salesforce.SharingRules SurveyInvitation {
+  fullName = "SurveyInvitation"
+  _parent = [
+    salesforce.SurveyInvitation,
+  ]
+  _alias = "SurveyInvitation"
+}

@@ -1,0 +1,336 @@
+type salesforce.SurveyResponse {
+  serviceid Id {
+    apiName = "SurveyResponse.Id"
+    label = "Survey Response ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyResponse.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SurveyResponse.Name"
+    length = 255
+    _required = true
+    label = "Response Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyResponse.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyResponse.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyResponse.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyResponse.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyResponse.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup InvitationId {
+    apiName = "SurveyResponse.InvitationId"
+    relationshipName = "Invitation"
+    referenceTo = [
+      salesforce.SurveyInvitation,
+    ]
+    _required = true
+    label = "Survey Invitation ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup InterviewId {
+    apiName = "SurveyResponse.InterviewId"
+    relationshipName = "Interview"
+    referenceTo = [
+      "FlowInterview",
+    ]
+    label = "Interview ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text InterviewGuid {
+    apiName = "SurveyResponse.InterviewGuid"
+    length = 255
+    label = "Interview GUID"
+    createable = false
+    updateable = false
+    unique = true
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SubmitterId {
+    apiName = "SurveyResponse.SubmitterId"
+    relationshipName = "Submitter"
+    referenceTo = [
+      salesforce.Contact,
+      salesforce.Lead,
+      salesforce.User,
+    ]
+    label = "Response Submitter ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "SurveyResponse.Status"
+    valueSet = [
+      {
+        fullName = "NotStarted"
+        isActive = true
+        label = "Not Started"
+        default = false
+      },
+      {
+        fullName = "Started"
+        isActive = true
+        label = "Started"
+        default = false
+      },
+      {
+        fullName = "Paused"
+        isActive = true
+        label = "Paused"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Response Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Language {
+    apiName = "SurveyResponse.Language"
+    valueSet = [
+      {
+        fullName = "en_US"
+        isActive = true
+        label = "English"
+        default = false
+      },
+      {
+        fullName = "de"
+        isActive = true
+        label = "German"
+        default = false
+      },
+      {
+        fullName = "es"
+        isActive = true
+        label = "Spanish"
+        default = false
+      },
+      {
+        fullName = "fr"
+        isActive = true
+        label = "French"
+        default = false
+      },
+      {
+        fullName = "it"
+        isActive = true
+        label = "Italian"
+        default = false
+      },
+      {
+        fullName = "ja"
+        isActive = true
+        label = "Japanese"
+        default = false
+      },
+      {
+        fullName = "sv"
+        isActive = true
+        label = "Swedish"
+        default = false
+      },
+      {
+        fullName = "ko"
+        isActive = true
+        label = "Korean"
+        default = false
+      },
+      {
+        fullName = "zh_TW"
+        isActive = true
+        label = "Chinese (Traditional)"
+        default = false
+      },
+      {
+        fullName = "zh_CN"
+        isActive = true
+        label = "Chinese (Simplified)"
+        default = false
+      },
+      {
+        fullName = "pt_BR"
+        isActive = true
+        label = "Portuguese (Brazil)"
+        default = false
+      },
+      {
+        fullName = "nl_NL"
+        isActive = true
+        label = "Dutch"
+        default = false
+      },
+      {
+        fullName = "da"
+        isActive = true
+        label = "Danish"
+        default = false
+      },
+      {
+        fullName = "th"
+        isActive = true
+        label = "Thai"
+        default = false
+      },
+      {
+        fullName = "fi"
+        isActive = true
+        label = "Finnish"
+        default = false
+      },
+      {
+        fullName = "ru"
+        isActive = true
+        label = "Russian"
+        default = false
+      },
+      {
+        fullName = "es_MX"
+        isActive = true
+        label = "Spanish (Mexico)"
+        default = false
+      },
+      {
+        fullName = "no"
+        isActive = true
+        label = "Norwegian"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Response Language"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CompletionDateTime {
+    apiName = "SurveyResponse.CompletionDateTime"
+    label = "Response Completion Date and Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text IpAddress {
+    apiName = "SurveyResponse.IpAddress"
+    length = 39
+    label = "Response IP Address"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Geolocation Location {
+    apiName = "SurveyResponse.Location"
+    label = "Response Location"
+    scale = 0
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyVersionId {
+    apiName = "SurveyResponse.SurveyVersionId"
+    relationshipName = "SurveyVersion"
+    referenceTo = [
+      salesforce.SurveyVersion,
+    ]
+    _required = true
+    label = "Survey Version ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyId {
+    apiName = "SurveyResponse.SurveyId"
+    relationshipName = "Survey"
+    referenceTo = [
+      salesforce.Survey,
+    ]
+    _required = true
+    label = "Survey ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

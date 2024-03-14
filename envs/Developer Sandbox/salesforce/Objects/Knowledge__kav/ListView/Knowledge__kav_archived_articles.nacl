@@ -1,0 +1,27 @@
+salesforce.ListView Knowledge__kav_archived_articles {
+  fullName = "Knowledge__kav.archived_articles"
+  columns = [
+    "TITLE",
+    "ABSTRACT",
+    "ARTICLE_NUMBER",
+    "LANGUAGE",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "PUBLISH_STATUS"
+      operation = "equals"
+      value = "3"
+    },
+    {
+      field = "LANGUAGE"
+      operation = "equals"
+      value = "en_US"
+    },
+  ]
+  label = "Archived Articles"
+  _parent = [
+    salesforce.Knowledge__kav,
+  ]
+  _alias = "Archived Articles"
+}

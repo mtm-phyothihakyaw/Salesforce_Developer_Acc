@@ -1,0 +1,25 @@
+salesforce.WorkflowAlert Account_Recall_Email@vu {
+  fullName = "Account.Recall_Email"
+  description = "Recall Email"
+  protected = false
+  recipients = [
+    {
+      field = salesforce.Account.field.BSE__c
+      type = "userLookup"
+    },
+    {
+      field = salesforce.Account.field.Leader__c
+      type = "userLookup"
+    },
+    {
+      field = salesforce.Account.field.Manager_Approver__c
+      type = "userLookup"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = salesforce.EmailTemplate.instance.unfiled_public_Recall_Email_Template@zcduu
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.Recall_Email"
+}

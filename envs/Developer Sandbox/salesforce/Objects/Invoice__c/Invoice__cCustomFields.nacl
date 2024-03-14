@@ -1,0 +1,11 @@
+type salesforce.Invoice__c {
+  salesforce.TextArea Description__c {
+    apiName = "Invoice__c.Description__c"
+    externalId = false
+    label = "Description"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

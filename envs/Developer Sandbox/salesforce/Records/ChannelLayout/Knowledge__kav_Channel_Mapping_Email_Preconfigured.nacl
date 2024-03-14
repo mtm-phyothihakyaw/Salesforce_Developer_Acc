@@ -1,0 +1,17 @@
+salesforce.ChannelLayout Knowledge__kav_Channel_Mapping_Email_Preconfigured@uuvuuu {
+  fullName = "Knowledge__kav.Channel_Mapping_Email_Preconfigured"
+  doesExcludeFieldLabels = true
+  doesExcludeFiles = false
+  enabledChannels = "Email"
+  label = "Email (Preconfigured)"
+  layoutItems = [
+    {
+      field = "Question__c"
+    },
+    {
+      field = "Content__c"
+    },
+  ]
+  recordType = "--Master--"
+  _alias = "Email (Preconfigured)"
+}

@@ -1,0 +1,9 @@
+salesforce.Role Leader {
+  fullName = "Leader"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  mayForecastManagerShare = false
+  name = "Leader"
+  opportunityAccessLevel = "Edit"
+  _alias = "Leader"
+}

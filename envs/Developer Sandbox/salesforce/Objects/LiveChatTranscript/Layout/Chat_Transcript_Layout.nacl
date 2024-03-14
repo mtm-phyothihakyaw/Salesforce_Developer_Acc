@@ -1,0 +1,242 @@
+salesforce.Layout LiveChatTranscript_Chat_Transcript_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.Name
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.RequestTime
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.StartTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.EndTime
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.WaitTime
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.ChatDuration
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.Status
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.LiveChatDeploymentId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.LiveChatButtonId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.SkillId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.EndedBy
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Transcript"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.Body
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Attached Records"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.CaseId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.ContactId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.LeadId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Visitor Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LiveChatTranscript.field.LiveChatVisitorId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.Location
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.IpAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.ReferrerUri
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.VisitorNetwork
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.Browser
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.BrowserLanguage
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.Platform
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.ScreenResolution
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscript.field.UserAgent
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Metrics"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.AverageResponseTimeVisitor
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.VisitorMessageCount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.MaxResponseTimeVisitor
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.AverageResponseTimeOperator
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.OperatorMessageCount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscript.field.MaxResponseTimeOperator
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Time",
+        "Agent",
+        "Type",
+        "Detail",
+      ]
+      relatedList = "RelatedLiveChatTranscriptEventList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "LiveChatTranscript-Chat Transcript Layout"
+  _parent = [
+    salesforce.LiveChatTranscript,
+  ]
+  _alias = "LiveChatTranscript-Chat Transcript Layout"
+}

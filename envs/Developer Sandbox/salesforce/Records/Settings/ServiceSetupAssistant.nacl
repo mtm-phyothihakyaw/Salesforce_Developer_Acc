@@ -1,0 +1,5 @@
+salesforce.ServiceSetupAssistantSettings {
+  fullName = "ServiceSetupAssistant"
+  enableServiceSetupAssistant = "true"
+  _alias = "ServiceSetupAssistant"
+}

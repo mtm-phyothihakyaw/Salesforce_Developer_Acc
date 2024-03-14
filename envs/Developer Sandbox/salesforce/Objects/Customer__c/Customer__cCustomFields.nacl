@@ -1,0 +1,12 @@
+type salesforce.Customer__c {
+  salesforce.Checkbox Active__c {
+    apiName = "Customer__c.Active__c"
+    defaultValue = false
+    externalId = false
+    label = "Active"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

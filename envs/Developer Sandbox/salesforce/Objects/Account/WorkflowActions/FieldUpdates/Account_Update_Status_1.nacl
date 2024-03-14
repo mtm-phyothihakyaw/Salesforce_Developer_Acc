@@ -1,0 +1,14 @@
+salesforce.WorkflowFieldUpdate Account_Update_Status_1@vuu {
+  fullName = "Account.Update_Status_1"
+  field = salesforce.Account.field.Approval_Status__c
+  literalValue = "Pending"
+  name = "Update Status 1"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.Update_Status_1"
+}

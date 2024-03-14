@@ -1,0 +1,7 @@
+salesforce.NavigationMenu SFDC_Default_Navigation_Default_Help_Center {
+  fullName = "SFDC_Default_Navigation_Default_Help_Center"
+  container = "Default Help Center"
+  containerType = "Network"
+  label = "Default Navigation"
+  _alias = "Default Navigation"
+}

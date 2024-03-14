@@ -1,0 +1,259 @@
+type salesforce.Account {
+  salesforce.Picklist Active__c {
+    apiName = "Account.Active__c"
+    externalId = false
+    label = "Active"
+    valueSet = [
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    sorted = false
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Approval_Status__c {
+    apiName = "Account.Approval_Status__c"
+    externalId = false
+    label = "Approval Status"
+    valueSet = [
+      {
+        fullName = "In Progress"
+        default = false
+        label = "In Progress"
+      },
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+      },
+      {
+        fullName = "Approved"
+        default = false
+        label = "Approved"
+      },
+      {
+        fullName = "Rejected"
+        default = false
+        label = "Rejected"
+      },
+    ]
+    sorted = false
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup BSE__c {
+    apiName = "Account.BSE__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "BSE Approver"
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "$User.Id"
+          operation = "notEqual"
+          valueField = "User.Id"
+        },
+        {
+          field = "User.UserRole.Name"
+          operation = "equals"
+          value = "BSE"
+        },
+      ]
+      isOptional = false
+    }
+    referenceTo = [
+      salesforce.User,
+    ]
+    relationshipName = "Accounts1"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist CustomerPriority__c {
+    apiName = "Account.CustomerPriority__c"
+    externalId = false
+    label = "Customer Priority"
+    valueSet = [
+      {
+        fullName = "High"
+        default = false
+        label = "High"
+      },
+      {
+        fullName = "Low"
+        default = false
+        label = "Low"
+      },
+      {
+        fullName = "Medium"
+        default = false
+        label = "Medium"
+      },
+    ]
+    sorted = false
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Leader__c {
+    apiName = "Account.Leader__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Leader Approver"
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "$User.Id"
+          operation = "notEqual"
+          valueField = "User.Id"
+        },
+        {
+          field = "User.UserRole.Name"
+          operation = "equals"
+          value = "Leader"
+        },
+      ]
+      isOptional = false
+    }
+    referenceTo = [
+      salesforce.User,
+    ]
+    relationshipName = "Accounts2"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Manager_Approver__c {
+    apiName = "Account.Manager_Approver__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Manager Approver"
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "User.Id"
+          operation = "notEqual"
+          valueField = "$User.Id"
+        },
+        {
+          field = "User.UserRole.Name"
+          operation = "equals"
+          value = "Manager"
+        },
+      ]
+      isOptional = false
+    }
+    referenceTo = [
+      salesforce.User,
+    ]
+    relationshipName = "Accounts"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number NumberofLocations__c {
+    apiName = "Account.NumberofLocations__c"
+    externalId = false
+    label = "Number of Locations"
+    precision = 3
+    scale = 0
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date SLAExpirationDate__c {
+    apiName = "Account.SLAExpirationDate__c"
+    externalId = false
+    label = "SLA Expiration Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text SLASerialNumber__c {
+    apiName = "Account.SLASerialNumber__c"
+    externalId = false
+    label = "SLA Serial Number"
+    length = 10
+    unique = false
+    createable = true
+    updateable = true
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist SLA__c {
+    apiName = "Account.SLA__c"
+    externalId = false
+    label = "SLA"
+    valueSet = [
+      {
+        fullName = "Gold"
+        default = false
+        label = "Gold"
+      },
+      {
+        fullName = "Silver"
+        default = false
+        label = "Silver"
+      },
+      {
+        fullName = "Platinum"
+        default = false
+        label = "Platinum"
+      },
+      {
+        fullName = "Bronze"
+        default = false
+        label = "Bronze"
+      },
+    ]
+    sorted = false
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist UpsellOpportunity__c {
+    apiName = "Account.UpsellOpportunity__c"
+    externalId = false
+    label = "Upsell Opportunity"
+    valueSet = [
+      {
+        fullName = "Maybe"
+        default = false
+        label = "Maybe"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    sorted = false
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

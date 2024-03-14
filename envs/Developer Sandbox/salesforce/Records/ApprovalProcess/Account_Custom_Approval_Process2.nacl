@@ -1,0 +1,200 @@
+salesforce.ApprovalProcess Account_Custom_Approval_Process2@vuu {
+  fullName = "Account.Custom_Approval_Process2"
+  active = true
+  allowRecall = true
+  allowedSubmitters = {
+    type = "owner"
+  }
+  approvalPageFields = {
+    field = [
+      "Name",
+      "Owner",
+      "AccountNumber",
+      "Phone",
+      "Approval_Status__c",
+    ]
+  }
+  approvalStep = [
+    {
+      allowDelegate = false
+      approvalActions = {
+        action = [
+          {
+            name = "Update_Status"
+            type = "FieldUpdate"
+          },
+        ]
+      }
+      assignedApprover = {
+        approver = [
+          {
+            name = "Manager_Approver__c"
+            type = "relatedUserField"
+          },
+          {
+            name = "BSE__c"
+            type = "relatedUserField"
+          },
+          {
+            name = "Leader__c"
+            type = "relatedUserField"
+          },
+        ]
+        whenMultipleApprovers = "Unanimous"
+      }
+      entryCriteria = {
+        criteriaItems = [
+          {
+            field = salesforce.Account.field.Manager_Approver__c
+            operation = "notEqual"
+          },
+          {
+            field = salesforce.Account.field.BSE__c
+            operation = "notEqual"
+          },
+          {
+            field = salesforce.Account.field.Leader__c
+            operation = "notEqual"
+          },
+        ]
+      }
+      ifCriteriaNotMet = "GotoNextStep"
+      label = "Manager Approval"
+      name = "Manager_Approval"
+    },
+    {
+      allowDelegate = false
+      assignedApprover = {
+        approver = [
+          {
+            name = "BSE__c"
+            type = "relatedUserField"
+          },
+          {
+            name = "Leader__c"
+            type = "relatedUserField"
+          },
+        ]
+        whenMultipleApprovers = "Unanimous"
+      }
+      entryCriteria = {
+        criteriaItems = [
+          {
+            field = salesforce.Account.field.Manager_Approver__c
+            operation = "equals"
+          },
+          {
+            field = salesforce.Account.field.BSE__c
+            operation = "notEqual"
+          },
+          {
+            field = salesforce.Account.field.Leader__c
+            operation = "notEqual"
+          },
+        ]
+      }
+      ifCriteriaNotMet = "GotoNextStep"
+      label = "BSE Approval"
+      name = "BSE_Approval"
+      rejectBehavior = {
+        type = "RejectRequest"
+      }
+    },
+    {
+      allowDelegate = false
+      assignedApprover = {
+        approver = [
+          {
+            name = "Leader__c"
+            type = "relatedUserField"
+          },
+        ]
+        whenMultipleApprovers = "FirstResponse"
+      }
+      entryCriteria = {
+        criteriaItems = [
+          {
+            field = salesforce.Account.field.Manager_Approver__c
+            operation = "equals"
+          },
+          {
+            field = salesforce.Account.field.BSE__c
+            operation = "equals"
+          },
+          {
+            field = salesforce.Account.field.Leader__c
+            operation = "notEqual"
+          },
+        ]
+      }
+      label = "Leader Approval"
+      name = "Leader_Approval"
+      rejectBehavior = {
+        type = "RejectRequest"
+      }
+    },
+  ]
+  enableMobileDeviceAccess = false
+  entryCriteria = {
+    formula = "OwnerId <> LastModifiedById"
+  }
+  finalApprovalActions = {
+    action = [
+      {
+        name = "Approve_mail"
+        type = "Alert"
+      },
+      {
+        name = "update_field"
+        type = "FieldUpdate"
+      },
+    ]
+  }
+  finalApprovalRecordLock = true
+  finalRejectionActions = {
+    action = [
+      {
+        name = "update_status_when_reject"
+        type = "FieldUpdate"
+      },
+    ]
+  }
+  finalRejectionRecordLock = false
+  initialSubmissionActions = {
+    action = [
+      {
+        name = "update_status_0"
+        type = "FieldUpdate"
+      },
+      {
+        name = "Update_Status_1"
+        type = "FieldUpdate"
+      },
+    ]
+  }
+  label = "Custom Approval Process2"
+  nextAutomatedApprover = {
+    useApproverFieldOfRecordOwner = false
+    userHierarchyField = "Manager"
+  }
+  processOrder = 1
+  recallActions = {
+    action = [
+      {
+        name = "recall"
+        type = "FieldUpdate"
+      },
+      {
+        name = "recall_2"
+        type = "FieldUpdate"
+      },
+      {
+        name = "Recall_Email"
+        type = "Alert"
+      },
+    ]
+  }
+  recordEditability = "AdminOnly"
+  showApprovalHistory = true
+  _alias = "Custom Approval Process2"
+}

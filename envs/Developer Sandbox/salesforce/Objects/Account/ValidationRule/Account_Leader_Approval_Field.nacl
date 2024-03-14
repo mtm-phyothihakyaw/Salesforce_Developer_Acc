@@ -1,0 +1,20 @@
+salesforce.ValidationRule Account_Leader_Approval_Field {
+  fullName = "Account.Leader_Approval_Field"
+  active = true
+  errorConditionFormula = '''
+(Manager_Approver__r.Username  = null && BSE__r.Username = null &&  Leader__r.Username = null) || 
+
+((Manager_Approver__r.Username <> null || BSE__r.Username  <> null) &&  Leader__r.Username = null)
+'''
+  errorDisplayField = salesforce.Account.field.Leader__c
+  errorMessage = "Leader can't be null"
+  _parent = [
+    salesforce.Account,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.Manager_Approver__c
+    },
+  ]
+  _alias = "Account.Leader_Approval_Field"
+}

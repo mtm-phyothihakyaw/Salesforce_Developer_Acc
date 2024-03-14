@@ -1,0 +1,23 @@
+salesforce.SharingRules Knowledge__kav {
+  sharingGuestRules = [
+    {
+      fullName = "Default_Help_Center_Guest_Criteria_Based_Sharing_Rule"
+      accessLevel = "Read"
+      label = "Default Help Center Guest Criteria-Based Sharing Rule"
+      sharedTo = {
+        guestUser = "Default_Help_Center"
+      }
+      criteriaItems = {
+        field = salesforce.Knowledge__kav.field.IsVisibleInPkb
+        operation = "equals"
+        value = "True"
+      }
+      includeHVUOwnedRecords = false
+    },
+  ]
+  fullName = "Knowledge__kav"
+  _parent = [
+    salesforce.Knowledge__kav,
+  ]
+  _alias = "Knowledge__kav"
+}

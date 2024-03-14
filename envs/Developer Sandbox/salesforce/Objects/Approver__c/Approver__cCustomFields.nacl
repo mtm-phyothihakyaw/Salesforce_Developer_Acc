@@ -1,0 +1,16 @@
+type salesforce.Approver__c {
+  salesforce.Lookup User__c {
+    apiName = "Approver__c.User__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "User"
+    referenceTo = [
+      salesforce.User,
+    ]
+    relationshipName = "Approvers"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

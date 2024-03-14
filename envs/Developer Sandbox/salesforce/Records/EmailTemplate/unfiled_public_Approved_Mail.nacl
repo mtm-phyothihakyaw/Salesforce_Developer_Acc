@@ -1,0 +1,13 @@
+salesforce.EmailTemplate unfiled_public_Approved_Mail@zcdu {
+  available = true
+  encodingKey = "UTF-8"
+  name = "Approved Mail"
+  style = "none"
+  subject = "Approved Your Request"
+  textOnly = "Your request({!Account.Name}) has been approved."
+  type = "custom"
+  uiType = "Aloha"
+  fullName = "unfiled$public/Approved_Mail"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Approved_Mail/Approved_Mail.email")
+  _alias = "unfiled$public/Approved_Mail"
+}

@@ -1,0 +1,51 @@
+salesforce.Layout ShiftWorkTopic__5F_5FMISSING_LABEL_5F_5F_PropertyFile___val_ShiftWorkTopic_not_found_in_section_StandardLayouts@bppsppssbsssssss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ShiftWorkTopic.field.ShiftId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ShiftWorkTopic.field.WorkTypeId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ShiftWorkTopic.field.AreAllTopicsSupported
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ShiftWorkTopic.field.WorkTypeGroupId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ShiftWorkTopic-%5F%5FMISSING LABEL%5F%5F PropertyFile - val ShiftWorkTopic not found in section StandardLayouts"
+  _parent = [
+    salesforce.ShiftWorkTopic,
+  ]
+  _alias = "ShiftWorkTopic-%5F%5FMISSING LABEL%5F%5F PropertyFile - val ShiftWorkTopic not found in section StandardLayouts"
+}

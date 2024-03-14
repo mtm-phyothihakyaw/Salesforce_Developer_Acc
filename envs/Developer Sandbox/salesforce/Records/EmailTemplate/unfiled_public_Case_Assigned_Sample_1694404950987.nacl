@@ -1,0 +1,14 @@
+salesforce.EmailTemplate unfiled_public_Case_Assigned_Sample_1694404950987@zcduuu {
+  available = true
+  description = "Sent to case contact when case is assigned"
+  encodingKey = "UTF-8"
+  name = "Case Assigned (Sample)"
+  relatedEntityType = "Case"
+  style = "none"
+  subject = "A case was assigned to you"
+  type = "custom"
+  uiType = "SFX"
+  fullName = "unfiled$public/Case_Assigned_Sample_1694404950987"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Case_Assigned_Sample_1694404950987/Case_Assigned_Sample_1694404950987.email")
+  _alias = "unfiled$public/Case_Assigned_Sample_1694404950987"
+}

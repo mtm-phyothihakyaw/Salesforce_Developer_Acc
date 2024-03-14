@@ -1,0 +1,148 @@
+type salesforce.Leave_Request__c {
+  salesforce.Picklist Approval_Status__c {
+    apiName = "Leave_Request__c.Approval_Status__c"
+    externalId = false
+    label = "Approval Status"
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+      },
+      {
+        fullName = "Approved"
+        default = false
+        label = "Approved"
+      },
+      {
+        fullName = "Rejected"
+        default = false
+        label = "Rejected"
+      },
+    ]
+    sorted = false
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime End_Date_Time__c {
+    apiName = "Leave_Request__c.End_Date_Time__c"
+    externalId = false
+    label = "End Date Time"
+    _required = true
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Leader_Approver_User__c {
+    apiName = "Leave_Request__c.Leader_Approver_User__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Leader Approver User"
+    referenceTo = [
+      salesforce.User,
+    ]
+    relationshipName = "Leave_Requests1"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Leader_Approver__c {
+    apiName = "Leave_Request__c.Leader_Approver__c"
+    deleteConstraint = "Restrict"
+    externalId = false
+    label = "Leader Approver"
+    referenceTo = [
+      salesforce.Approver__c,
+    ]
+    relationshipLabel = "Leave Requests (Leader Approver)"
+    relationshipName = "Leave_Requests1"
+    _required = true
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Leave_Type__c {
+    apiName = "Leave_Request__c.Leave_Type__c"
+    externalId = false
+    label = "Leave Type"
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "Casual Leave"
+        default = false
+        label = "Casual Leave"
+      },
+      {
+        fullName = "Annual Leave"
+        default = false
+        label = "Annual Leave"
+      },
+      {
+        fullName = "Sick Leave"
+        default = false
+        label = "Sick Leave"
+      },
+    ]
+    sorted = false
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Manager_Approver_User__c {
+    apiName = "Leave_Request__c.Manager_Approver_User__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Manager Approver User"
+    referenceTo = [
+      salesforce.User,
+    ]
+    relationshipName = "Leave_Requests"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Manager_Approver__c {
+    apiName = "Leave_Request__c.Manager_Approver__c"
+    deleteConstraint = "Restrict"
+    externalId = false
+    label = "Manager Approver"
+    referenceTo = [
+      salesforce.Approver__c,
+    ]
+    relationshipLabel = "Leave Requests"
+    relationshipName = "Leave_Requests"
+    _required = true
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.TextArea Reason__c {
+    apiName = "Leave_Request__c.Reason__c"
+    externalId = false
+    label = "Reason"
+    _required = true
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime Start_Date_Time__c {
+    apiName = "Leave_Request__c.Start_Date_Time__c"
+    externalId = false
+    label = "Start Date Time"
+    _required = true
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

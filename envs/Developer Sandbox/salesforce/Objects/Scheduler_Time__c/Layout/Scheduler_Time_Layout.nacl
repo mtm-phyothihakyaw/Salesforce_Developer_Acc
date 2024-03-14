@@ -1,0 +1,86 @@
+salesforce.Layout Scheduler_Time__c_Scheduler_Time_Layout@uuubss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Scheduler_Time__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Scheduler_Time__c.field.Schedule_Date_Time__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Scheduler_Time__c.field.Run_Weekly__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Scheduler_Time__c.field.Run_Daily__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Scheduler_Time__c.field.Run_Monthly__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Scheduler_Time__c.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Scheduler_Time__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Scheduler_Time__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Scheduler_Time__c-Scheduler Time Layout"
+  _parent = [
+    salesforce.Scheduler_Time__c,
+  ]
+  _alias = "Scheduler_Time__c-Scheduler Time Layout"
+}

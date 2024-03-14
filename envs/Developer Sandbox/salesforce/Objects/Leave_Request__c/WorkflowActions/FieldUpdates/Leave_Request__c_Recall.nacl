@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Leave_Request__c_Recall@uuuv {
+  fullName = "Leave_Request__c.Recall"
+  field = salesforce.Leave_Request__c.field.Approval_Status__c
+  name = "Recall"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Leave_Request__c,
+  ]
+  _alias = "Leave_Request__c.Recall"
+}

@@ -1,0 +1,23 @@
+salesforce.LightningPage Approval_Test_UtilityBar {
+  flexiPageRegions = [
+    {
+      name = "utilityItems"
+      type = "Region"
+    },
+    {
+      name = "backgroundComponents"
+      type = "Background"
+    },
+  ]
+  masterLabel = "Approval Test UtilityBar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+    properties = {
+      name = "isLeftAligned"
+      value = "true"
+    }
+  }
+  type = "UtilityBar"
+  fullName = "Approval_Test_UtilityBar"
+  _alias = "Approval_Test_UtilityBar"
+}

@@ -1,0 +1,10 @@
+salesforce.Queue Service_Chat {
+  fullName = "Service_Chat"
+  doesSendEmailToMembers = false
+  name = "Service Chat"
+  queueRoutingConfig = salesforce.QueueRoutingConfig.instance.Service_Routing_Chat
+  queueSobject = {
+    sobjectType = "LiveChatTranscript"
+  }
+  _alias = "Service_Chat"
+}

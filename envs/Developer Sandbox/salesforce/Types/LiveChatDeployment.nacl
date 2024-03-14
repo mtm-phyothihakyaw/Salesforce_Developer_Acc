@@ -1,0 +1,62 @@
+type salesforce.LiveChatDeployment {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string brandingImage {
+  }
+  number connectionTimeoutDuration {
+  }
+  number connectionWarningDuration {
+  }
+  boolean displayQueuePosition {
+  }
+  salesforce.LiveChatDeploymentDomainWhitelist domainWhiteList {
+  }
+  boolean enablePrechatApi {
+  }
+  boolean enableTranscriptSave {
+  }
+  serviceid fullName {
+  }
+  string label {
+  }
+  string mobileBrandingImage {
+  }
+  string site {
+    foreignKeyDomain = [
+      salesforce.CustomSite,
+    ]
+  }
+  string windowTitle {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "liveChatDeployment"
+  dirName = "liveChatDeployments"
+  metadataType = "LiveChatDeployment"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,38 @@
+salesforce.ModerationRule Default_Help_Center_Flag_banned@ssvu {
+  fullName = "Default Help Center.Flag_banned"
+  action = "Flag"
+  active = false
+  description = "Community moderators review posts and comments containing banned keywords"
+  entitiesAndFields = [
+    {
+      entityName = "FeedComment"
+      fieldName = "RawCommentBody"
+      keywordList = "Default Help Center.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "LinkUrl"
+      keywordList = "Default Help Center.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "RawBody"
+      keywordList = "Default Help Center.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "Title"
+      keywordList = "Default Help Center.Banned"
+    },
+    {
+      entityName = "FeedPollChoice"
+      fieldName = "ChoiceBody"
+      keywordList = "Default Help Center.Banned"
+    },
+  ]
+  masterLabel = "Flag posts or comments containing banned keywords"
+  type = "Content"
+  userCriteria = "Default Help Center.Customer_Members"
+  userMessage = "You can't use %BLOCKED_KEYWORD% or other inappropriate words in this community. Review your content and try again."
+  _alias = "Default Help Center.Flag_banned"
+}

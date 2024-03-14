@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Account_recall_2@vu {
+  fullName = "Account.recall_2"
+  field = salesforce.Account.field.Manager_Approver__c
+  name = "recall 2"
+  notifyAssignee = false
+  operation = "LookupValue"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.recall_2"
+}

@@ -1,0 +1,163 @@
+salesforce.CustomApplication Approval_Test {
+  brand = {
+    headerColor = "#0070D2"
+    shouldOverrideOrgTheme = false
+  }
+  formFactors = [
+    "Small",
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Approval Test"
+  navType = "Standard"
+  profileActionOverrides = [
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Small"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "Admin"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "Admin"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Small"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "Work.com Only User"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "Work.com Only User"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Small"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "Standard"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "Standard"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Small"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "StandardAul"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "StandardAul"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Small"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "SolutionManager"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "SolutionManager"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Small"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "Silver Partner User"
+    },
+    {
+      actionName = "View"
+      content = "Account_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Account"
+      type = "Flexipage"
+      profile = "Silver Partner User"
+    },
+    {
+      actionName = "View"
+      content = "Leave_Request_Record_Page"
+      formFactor = "Small"
+      pageOrSobjectType = "Leave_Request__c"
+      type = "Flexipage"
+      profile = "Admin"
+    },
+    {
+      actionName = "View"
+      content = "Leave_Request_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Leave_Request__c"
+      type = "Flexipage"
+      profile = "Admin"
+    },
+    {
+      actionName = "View"
+      content = "Approver_Record_Page"
+      formFactor = "Small"
+      pageOrSobjectType = "Approver__c"
+      type = "Flexipage"
+      profile = "Admin"
+    },
+    {
+      actionName = "View"
+      content = "Approver_Record_Page"
+      formFactor = "Large"
+      pageOrSobjectType = "Approver__c"
+      type = "Flexipage"
+      profile = "Admin"
+    },
+  ]
+  tabs = [
+    "standard-Account",
+    "standard-AppLauncher",
+    "standard-ProcessInstanceWorkitem",
+    salesforce.CustomTab.instance.Leave_Request__c,
+    salesforce.CustomTab.instance.Approver__c,
+    salesforce.CustomTab.instance.Scheduler_Time__c,
+  ]
+  uiType = "Lightning"
+  utilityBar = "Approval_Test_UtilityBar"
+  fullName = "Approval_Test"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.Approval_Test_UtilityBar
+    },
+  ]
+  _alias = "Approval Test"
+}

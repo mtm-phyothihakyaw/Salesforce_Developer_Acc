@@ -1,0 +1,7 @@
+salesforce.SharingRules Customer__c {
+  fullName = "Customer__c"
+  _parent = [
+    salesforce.Customer__c,
+  ]
+  _alias = "Customer__c"
+}

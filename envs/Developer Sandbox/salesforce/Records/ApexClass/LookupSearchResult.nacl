@@ -1,0 +1,7 @@
+salesforce.ApexClass LookupSearchResult {
+  apiVersion = 48
+  status = "Active"
+  fullName = "LookupSearchResult"
+  content = file("salesforce/Records/ApexClass/LookupSearchResult.cls")
+  _alias = "LookupSearchResult"
+}

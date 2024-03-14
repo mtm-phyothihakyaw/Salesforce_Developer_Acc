@@ -1,0 +1,137 @@
+type salesforce.LiveChatButton {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string autoGreeting {
+  }
+  number chasitorIdleTimeout {
+  }
+  number chasitorIdleTimeoutWarning {
+  }
+  string chatPage {
+    foreignKeyDomain = [
+      salesforce.ApexPage,
+    ]
+  }
+  string customAgentName {
+  }
+  salesforce.LiveChatButtonDeployments deployments {
+  }
+  boolean enableQueue {
+  }
+  serviceid fullName {
+  }
+  string inviteImage {
+    foreignKeyDomain = [
+      salesforce.StaticResource,
+    ]
+  }
+  boolean isActive {
+  }
+  string label {
+  }
+  number numberOfReroutingAttempts {
+  }
+  string offlineImage {
+    foreignKeyDomain = [
+      salesforce.StaticResource,
+    ]
+  }
+  string onlineImage {
+    foreignKeyDomain = [
+      salesforce.StaticResource,
+    ]
+  }
+  boolean optionsCustomRoutingIsEnabled {
+  }
+  boolean optionsHasChasitorIdleTimeout {
+  }
+  boolean optionsHasInviteAfterAccept {
+  }
+  boolean optionsHasInviteAfterReject {
+  }
+  boolean optionsHasRerouteDeclinedRequest {
+  }
+  boolean optionsIsAutoAccept {
+  }
+  boolean optionsIsInviteAutoRemove {
+  }
+  number overallQueueLength {
+  }
+  number perAgentQueueLength {
+  }
+  string postChatPage {
+  }
+  string postChatUrl {
+  }
+  string preChatFormPage {
+  }
+  string preChatFormUrl {
+  }
+  number pushTimeOut {
+  }
+  string site {
+    foreignKeyDomain = [
+      salesforce.CustomSite,
+    ]
+  }
+  salesforce.LiveChatButtonSkills skills {
+  }
+  number timeToRemoveInvite {
+  }
+  string windowLanguage {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "da",
+        "de",
+        "en_US",
+        "es",
+        "es_MX",
+        "fi",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "nl_NL",
+        "no",
+        "pt_BR",
+        "ru",
+        "sv",
+        "th",
+        "zh_CN",
+        "zh_TW",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "liveChatButton"
+  dirName = "liveChatButtons"
+  metadataType = "LiveChatButton"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

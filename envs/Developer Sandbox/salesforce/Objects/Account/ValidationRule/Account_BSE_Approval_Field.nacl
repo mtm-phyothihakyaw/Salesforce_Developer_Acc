@@ -1,0 +1,16 @@
+salesforce.ValidationRule Account_BSE_Approval_Field {
+  fullName = "Account.BSE_Approval_Field"
+  active = true
+  errorConditionFormula = "(Manager_Approver__r.Username  = null && BSE__r.Username = null &&  Leader__r.Username = null) || (Manager_Approver__r.Username  <> null &&  BSE__r.Username = null)"
+  errorDisplayField = salesforce.Account.field.BSE__c
+  errorMessage = "BSE can't be null"
+  _parent = [
+    salesforce.Account,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.Manager_Approver__c
+    },
+  ]
+  _alias = "Account.BSE_Approval_Field"
+}

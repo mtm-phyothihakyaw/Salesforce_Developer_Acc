@@ -1,0 +1,4 @@
+salesforce.ManagedTopics Default_Help_Center@s {
+  fullName = "Default Help Center"
+  _alias = "Default Help Center"
+}

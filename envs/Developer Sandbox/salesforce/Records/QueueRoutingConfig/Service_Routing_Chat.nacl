@@ -1,0 +1,10 @@
+salesforce.QueueRoutingConfig Service_Routing_Chat {
+  fullName = "Service_Routing_Chat"
+  capacityType = "INHERITED"
+  capacityWeight = 1
+  isAttributeBased = false
+  label = "Service Routing - Chat"
+  routingModel = "LEAST_ACTIVE"
+  routingPriority = 1
+  _alias = "Service Routing - Chat"
+}

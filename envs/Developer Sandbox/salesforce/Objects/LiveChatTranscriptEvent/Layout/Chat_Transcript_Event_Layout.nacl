@@ -1,0 +1,59 @@
+salesforce.Layout LiveChatTranscriptEvent_Chat_Transcript_Event_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.LiveChatTranscriptEvent.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LiveChatTranscriptEvent.field.Type
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LiveChatTranscriptEvent.field.Time
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LiveChatTranscriptEvent.field.LiveChatTranscriptId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscriptEvent.field.AgentId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LiveChatTranscriptEvent.field.Detail
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "LiveChatTranscriptEvent-Chat Transcript Event Layout"
+  _parent = [
+    salesforce.LiveChatTranscriptEvent,
+  ]
+  _alias = "LiveChatTranscriptEvent-Chat Transcript Event Layout"
+}

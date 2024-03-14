@@ -1,0 +1,79 @@
+salesforce.Flow Testing {
+  fullName = "Testing"
+  actionCalls = [
+    {
+      name = "Get_Input_Date"
+      label = "Get Input Date"
+      locationX = 176
+      locationY = 360
+      actionName = salesforce.ApexClass.instance.ApexAction
+      actionType = "apex"
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "inputDate"
+          value = {
+            elementReference = "$Flow.CurrentDate"
+          }
+        },
+      ]
+      nameSegment = "ApexAction"
+      storeOutputAutomatically = true
+      versionSegment = 1
+    },
+    {
+      name = "Test"
+      label = "Test"
+      locationX = 176
+      locationY = 252
+      actionName = salesforce.ApexClass.instance.Test
+      actionType = "apex"
+      connector = {
+        targetReference = "Get_Input_Date"
+      }
+      flowTransactionModel = "CurrentTransaction"
+      nameSegment = "Test"
+      versionSegment = 1
+    },
+  ]
+  apiVersion = 59
+  environments = "Default"
+  interviewLabel = "Testing {!$Flow.CurrentDateTime}"
+  label = "Testing"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "Test"
+    }
+    schedule = {
+      frequency = "Daily"
+      startDate = "2023-12-19"
+      startTime = "16:00:00.000Z"
+    }
+    triggerType = "Scheduled"
+  }
+  status = "Active"
+  _alias = "Testing"
+}

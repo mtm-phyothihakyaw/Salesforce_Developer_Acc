@@ -1,0 +1,9 @@
+salesforce.Queue Service_Case {
+  fullName = "Service_Case"
+  doesSendEmailToMembers = false
+  name = "Service Case"
+  queueSobject = {
+    sobjectType = "Case"
+  }
+  _alias = "Service_Case"
+}

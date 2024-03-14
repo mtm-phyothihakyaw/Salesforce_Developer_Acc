@@ -1,0 +1,7 @@
+salesforce.ApexClass ApexAction {
+  apiVersion = 59
+  status = "Active"
+  fullName = "ApexAction"
+  content = file("salesforce/Records/ApexClass/ApexAction.cls")
+  _alias = "ApexAction"
+}

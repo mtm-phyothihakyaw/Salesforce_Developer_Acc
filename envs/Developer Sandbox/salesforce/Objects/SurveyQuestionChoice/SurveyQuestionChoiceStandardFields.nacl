@@ -1,0 +1,123 @@
+type salesforce.SurveyQuestionChoice {
+  serviceid Id {
+    apiName = "SurveyQuestionChoice.Id"
+    label = "Survey Question Choice ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyQuestionChoice.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SurveyQuestionChoice.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyQuestionChoice.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyQuestionChoice.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyQuestionChoice.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyQuestionChoice.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyQuestionChoice.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup QuestionId {
+    apiName = "SurveyQuestionChoice.QuestionId"
+    relationshipName = "Question"
+    referenceTo = [
+      "SurveyQuestion",
+    ]
+    _required = true
+    label = "Survey Question ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyVersionId {
+    apiName = "SurveyQuestionChoice.SurveyVersionId"
+    relationshipName = "SurveyVersion"
+    referenceTo = [
+      salesforce.SurveyVersion,
+    ]
+    label = "Survey Version ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DeveloperName {
+    apiName = "SurveyQuestionChoice.DeveloperName"
+    length = 80
+    _required = true
+    label = "Developer Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeprecated {
+    apiName = "SurveyQuestionChoice.IsDeprecated"
+    defaultValue = false
+    label = "Is Deprecated"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

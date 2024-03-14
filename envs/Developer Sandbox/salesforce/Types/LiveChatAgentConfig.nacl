@@ -1,0 +1,93 @@
+type salesforce.LiveChatAgentConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.AgentConfigAssignments assignments {
+  }
+  string autoGreeting {
+  }
+  number capacity {
+  }
+  number criticalWaitTime {
+  }
+  string customAgentName {
+  }
+  boolean disableTransferConferenceGreeting {
+  }
+  boolean enableAgentFileTransfer {
+  }
+  boolean enableAgentSneakPeek {
+  }
+  boolean enableAssistanceFlag {
+  }
+  boolean enableAutoAwayOnDecline {
+  }
+  boolean enableAutoAwayOnPushTimeout {
+  }
+  boolean enableChatConferencing {
+  }
+  boolean enableChatMonitoring {
+  }
+  boolean enableChatTransferToAgent {
+  }
+  boolean enableChatTransferToButton {
+  }
+  boolean enableChatTransferToSkill {
+  }
+  boolean enableLogoutSound {
+  }
+  boolean enableNotifications {
+  }
+  boolean enableRequestSound {
+  }
+  boolean enableSneakPeek {
+  }
+  boolean enableVisitorBlocking {
+  }
+  boolean enableWhisperMessage {
+  }
+  serviceid fullName {
+  }
+  string label {
+  }
+  string supervisorDefaultButtonFilter {
+  }
+  string supervisorDefaultSkillFilter {
+  }
+  salesforce.SupervisorAgentConfigSkills supervisorSkills {
+  }
+  salesforce.AgentConfigButtons transferableButtons {
+  }
+  salesforce.AgentConfigSkills transferableSkills {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "liveChatAgentConfig"
+  dirName = "liveChatAgentConfigs"
+  metadataType = "LiveChatAgentConfig"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

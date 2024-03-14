@@ -1,0 +1,14 @@
+salesforce.WorkflowFieldUpdate Leave_Request__c_Initial_Submit@uuuvu {
+  fullName = "Leave_Request__c.Initial_Submit"
+  field = salesforce.Leave_Request__c.field.Approval_Status__c
+  literalValue = "Pending"
+  name = "Initial Submit"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Leave_Request__c,
+  ]
+  _alias = "Leave_Request__c.Initial_Submit"
+}

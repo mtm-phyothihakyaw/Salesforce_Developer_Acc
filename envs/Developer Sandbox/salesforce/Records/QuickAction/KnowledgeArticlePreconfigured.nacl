@@ -1,0 +1,51 @@
+salesforce.QuickAction KnowledgeArticlePreconfigured {
+  fullName = "KnowledgeArticlePreconfigured"
+  description = "Create a Knowledge article draft."
+  label = "New Article"
+  optionsCreateFeedItem = true
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "Title"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "UrlName"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "Summary"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Question__c"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Content__c"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "DigitalEngagementResponse__c"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+      {
+      },
+    ]
+  }
+  standardLabel = "Custom"
+  targetObject = salesforce.Knowledge__kav
+  type = "Create"
+  _alias = "New Article"
+}

@@ -1,0 +1,14 @@
+salesforce.WorkflowFieldUpdate Leave_Request__c_Update_Status_2@uuuvuu {
+  fullName = "Leave_Request__c.Update_Status_2"
+  field = salesforce.Leave_Request__c.field.Approval_Status__c
+  literalValue = "Rejected"
+  name = "Update Status 2"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Leave_Request__c,
+  ]
+  _alias = "Leave_Request__c.Update_Status_2"
+}

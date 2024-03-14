@@ -1,0 +1,96 @@
+type salesforce.LiveChatTranscriptSkill {
+  serviceid Id {
+    apiName = "LiveChatTranscriptSkill.Id"
+    label = "LiveChatTranscriptSkill ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveChatTranscriptSkill.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveChatTranscriptSkill.Name"
+    label = "LiveChatTranscriptSkill Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveChatTranscriptSkill.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveChatTranscriptSkill.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveChatTranscriptSkill.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveChatTranscriptSkill.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveChatTranscriptSkill.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup TranscriptId {
+    apiName = "LiveChatTranscriptSkill.TranscriptId"
+    relationshipName = "Transcript"
+    referenceTo = [
+      salesforce.LiveChatTranscript,
+    ]
+    _required = true
+    label = "Chat Transcript ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup SkillId {
+    apiName = "LiveChatTranscriptSkill.SkillId"
+    relationshipName = "Skill"
+    referenceTo = [
+      salesforce.Skill,
+    ]
+    label = "Skill ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

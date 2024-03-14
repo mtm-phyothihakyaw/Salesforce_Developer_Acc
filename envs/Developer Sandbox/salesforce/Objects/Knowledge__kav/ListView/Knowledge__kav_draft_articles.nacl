@@ -1,0 +1,27 @@
+salesforce.ListView Knowledge__kav_draft_articles {
+  fullName = "Knowledge__kav.draft_articles"
+  columns = [
+    "TITLE",
+    "ABSTRACT",
+    "ARTICLE_NUMBER",
+    "LANGUAGE",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "PUBLISH_STATUS"
+      operation = "equals"
+      value = "1"
+    },
+    {
+      field = "LANGUAGE"
+      operation = "equals"
+      value = "en_US"
+    },
+  ]
+  label = "Draft Articles"
+  _parent = [
+    salesforce.Knowledge__kav,
+  ]
+  _alias = "Draft Articles"
+}
